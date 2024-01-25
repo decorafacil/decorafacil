@@ -16,7 +16,8 @@
         android:src="@drawable/decorafacil_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_decorafacil_image_description" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputEmail"
@@ -37,7 +38,7 @@
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="E-mail"
+            android:hint="@string/edit_text_hint_email"
             android:inputType="textEmailAddress"
             android:textColorHint="@color/white"
             android:textSize="12sp" />
@@ -64,7 +65,7 @@
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha"
+            android:hint="@string/edit_text_hint_password"
             android:inputType="textPassword"
             android:textColorHint="@color/white"
             android:textSize="12sp" />
@@ -78,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:background="@drawable/rounded_button_background"
-        android:text="Entrar"
+        android:text="@string/button_login"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/imageViewDecoraFacilLogo"
@@ -89,7 +90,7 @@
         android:id="@+id/checkBoxKeepLogged"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manter-me logado"
+        android:text="@string/checkbox_keep_logged"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/textViewForgotPassword"
         app:layout_constraintHorizontal_bias="0.0"
@@ -103,7 +104,7 @@
         android:autoLink="web"
         android:clickable="true"
         android:focusable="true"
-        android:text="Esqueceu?"
+        android:text="@string/text_view_forgot_password"
         android:textColor="@android:color/white"
         android:textColorLink="@android:color/white"
         android:textStyle="bold"
@@ -134,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Não possui conta? "
+            android:text="@string/text_view_nao_possui_conta"
             android:textColor="@android:color/white" />
 
         <TextView
@@ -142,7 +143,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="CRIAR CONTA"
+            android:text="@string/text_view_create_account"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
     </LinearLayout>

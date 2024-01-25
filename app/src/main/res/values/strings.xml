@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Decorafacil</string>
+    <string name="logo_decorafacil_image_description">Logo DecoraFacil</string>
+    <string name="edit_text_hint_email">E-mail</string>
+    <string name="edit_text_hint_password">Senha</string>
+    <string name="button_login">Entrar</string>
+    <string name="checkbox_keep_logged">Manter-me logado</string>
+    <string name="text_view_forgot_password">Esqueceu?</string>
+    <string name="text_view_nao_possui_conta">Não possui conta?</string>
+    <string name="text_view_create_account">CRIAR CONTA</string>
 </resources>
