@@ -13,11 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/logo_decorafacil_image_description"
         android:src="@drawable/decorafacil_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/logo_decorafacil_image_description" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputEmail"
@@ -135,6 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="4dp"
             android:text="@string/text_view_nao_possui_conta"
             android:textColor="@android:color/white" />
 
