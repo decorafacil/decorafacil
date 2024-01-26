@@ -40,8 +40,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/edit_text_hint_email"
             android:inputType="textEmailAddress"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,6 +57,7 @@
         app:boxCornerRadiusTopEnd="24dp"
         app:boxCornerRadiusTopStart="24dp"
         app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@id/imageViewDecoraFacilLogo"
         app:layout_constraintStart_toStartOf="@id/imageViewDecoraFacilLogo"
@@ -67,8 +69,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/edit_text_hint_password"
             android:inputType="textPassword"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
