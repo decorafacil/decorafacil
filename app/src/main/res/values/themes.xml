@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Decorafacil" parent="Theme.Material3.DayNight.NoActionBar">
 
-        <item name="android:statusBarColor">#09184D</item>
+        <item name="android:statusBarColor">@color/blueDefault</item>
     </style>
 
     <style name="Theme.Decorafacil" parent="Base.Theme.Decorafacil" />

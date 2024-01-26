@@ -6,7 +6,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
 
         <!-- Adicione a cor da Barra de Status -->
-        <item name="android:statusBarColor">#09184D</item>
+        <item name="android:statusBarColor">@color/blueDefault</item>
     </style>
 
     <!-- Base application theme for dark theme -->
@@ -15,7 +15,7 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
 
         <!-- Adicione a cor da Barra de Status para o tema escuro -->
-        <item name="android:statusBarColor">#09184D</item>
+        <item name="android:statusBarColor">@color/blueDefault</item>
     </style>
 
     <style name="Theme.Decorafacil" parent="Base.Theme.Decorafacil" />
