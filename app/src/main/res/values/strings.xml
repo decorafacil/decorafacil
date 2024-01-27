@@ -16,4 +16,5 @@
     <string name="schedule_icon_description">Ícone de agenda</string>
     <string name="financial_icon_description">Ícone de cifrão do dólar</string>
     <string name="textview_pagamentos_pendentes">Pagamentos pendentes:</string>
+    <string name="textview_proximos_eventos">Próximos eventos:</string>
 </resources>

@@ -35,8 +35,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter"
                 android:text="@string/card_button_new_event"
-                android:textColor="#808085" />
+                android:textColor="#808085"
+                android:textSize="12sp" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -70,8 +72,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter"
                 android:text="@string/card_button_schedule"
-                android:textColor="#808085" />
+                android:textColor="#808085"
+                android:textSize="12sp" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -105,8 +109,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter"
                 android:text="@string/card_button_financial"
-                android:textColor="#808085" />
+                android:textColor="#808085"
+                android:textSize="12sp" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -117,6 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter"
         android:gravity="start"
         android:text="@string/textview_pagamentos_pendentes"
         android:textColor="#2F2E2E"
@@ -145,13 +152,26 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/inter"
         android:gravity="start"
-        android:text="@string/textview_pagamentos_pendentes"
+        android:text="@string/textview_proximos_eventos"
         android:textColor="#2F2E2E"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/recyclerViewPendingPayments"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@id/recyclerViewPendingPayments"
         app:layout_constraintTop_toBottomOf="@id/recyclerViewPendingPayments" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNextEvents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/textViewProximosEventos"
+        app:layout_constraintStart_toStartOf="@id/textViewProximosEventos"
+        app:layout_constraintTop_toBottomOf="@id/textViewProximosEventos"
+        tools:itemCount="3"
+        tools:listitem="@layout/event_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

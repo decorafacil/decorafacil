@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonFinancial"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ellipse"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/circle_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewEventDayOfMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_semibold"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/textViewEventMonth"
+            app:layout_constraintEnd_toEndOf="@id/ellipse"
+            app:layout_constraintStart_toStartOf="@id/ellipse"
+            app:layout_constraintTop_toTopOf="@id/ellipse"
+            tools:text="08" />
+
+        <TextView
+            android:id="@+id/textViewEventMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="1"
+            android:text="@string/card_button_financial"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ellipse"
+            app:layout_constraintEnd_toEndOf="@id/ellipse"
+            app:layout_constraintStart_toStartOf="@id/ellipse"
+            app:layout_constraintTop_toBottomOf="@id/textViewEventDayOfMonth"
+            tools:text="MAR" />
+
+        <TextView
+            android:id="@+id/textViewClientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_semibold"
+            android:maxLines="1"
+            android:textColor="#2F2E2E"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ellipse"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Luciana Alves de Souza" />
+
+        <TextView
+            android:id="@+id/textViewEventAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="1"
+            android:textColor="#808085"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ellipse"
+            app:layout_constraintTop_toBottomOf="@id/textViewClientName"
+            tools:text="Rua Governador José Roberto, 1413" />
+
+        <TextView
+            android:id="@+id/textViewEventTimetable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_semibold"
+            android:maxLines="1"
+            android:textColor="#2F2E2E"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ellipse"
+            app:layout_constraintTop_toBottomOf="@id/textViewEventAddress"
+            tools:text="14:00 - 18:00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

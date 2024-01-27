@@ -21,8 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:ellipsize="end"
+            android:fontFamily="@font/inter"
             android:maxLines="1"
-            android:text="@string/card_button_financial"
             android:textColor="#808085"
             android:textSize="14sp"
             tools:text="Luciana Alves de Souza" />
@@ -32,8 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:ellipsize="end"
+            android:fontFamily="@font/inter"
             android:maxLines="1"
-            android:text="@string/card_button_financial"
             android:textColor="#FF0000"
             android:textSize="16sp"
             tools:text="R$ 300,00" />
