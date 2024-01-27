@@ -9,4 +9,11 @@
     <string name="text_view_nao_possui_conta">Não possui conta?</string>
     <string name="text_view_create_account">CRIAR CONTA</string>
     <string name="logo_g4">Logo G4</string>
+    <string name="card_button_new_event">Novo Evento</string>
+    <string name="new_event_icon_description">Ícone de novo evento</string>
+    <string name="card_button_schedule">Agenda</string>
+    <string name="card_button_financial">Financeiro</string>
+    <string name="schedule_icon_description">Ícone de agenda</string>
+    <string name="financial_icon_description">Ícone de cifrão do dólar</string>
+    <string name="textview_pagamentos_pendentes">Pagamentos pendentes:</string>
 </resources>

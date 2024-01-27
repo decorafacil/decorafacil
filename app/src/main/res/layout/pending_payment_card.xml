@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonFinancial"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="100dp"
+    android:layout_height="60dp"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/card_button_financial"
+            android:textColor="#808085"
+            android:textSize="14sp"
+            tools:text="Luciana Alves de Souza" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/card_button_financial"
+            android:textColor="#FF0000"
+            android:textSize="16sp"
+            tools:text="R$ 300,00" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
