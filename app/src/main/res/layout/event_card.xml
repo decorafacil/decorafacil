@@ -5,7 +5,7 @@
     android:id="@+id/buttonFinancial"
     style="@style/Widget.Material3.CardView.Filled"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="80dp"
     android:layout_marginBottom="4dp"
     app:cardBackgroundColor="@color/white">
 
