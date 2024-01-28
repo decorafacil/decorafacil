@@ -6,5 +6,12 @@ class Address(
     val city: String,
     val state: String,
     val number: String,
-    val zipCode: String
-) {}
+    val zipCode: String,
+    val complement: String = ""
+) {
+
+    override fun toString(): String {
+        return "$street, $number $complement, $district, $city - $state, CEP: $zipCode"
+    }
+
+}
