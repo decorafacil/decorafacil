@@ -17,4 +17,5 @@
     <string name="financial_icon_description">Ícone de cifrão do dólar</string>
     <string name="textview_pagamentos_pendentes">Pagamentos pendentes:</string>
     <string name="textview_proximos_eventos">Próximos eventos:</string>
+    <string name="eye_hide_values_icon_description">Ícone de olho para esconder valores</string>
 </resources>

@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.decorafacil.databinding.PendingPaymentCardBinding
 import br.com.decorafacil.extension.toPtBr
-import br.com.decorafacil.models.Event
+import br.com.decorafacil.ui.recyclerView.model.HiddenOrVisibleEvent
 
 class PendingPaymentsAdapter(
     private val context: Context,
-    events: List<Event>
+    events: List<HiddenOrVisibleEvent>,
 ) : RecyclerView.Adapter<PendingPaymentsAdapter.ViewHolder>() {
 
     private val events = events.toMutableList()
@@ -22,9 +22,10 @@ class PendingPaymentsAdapter(
         private val paymentValue = binding.textViewPaymentValue
 
         @SuppressLint("SetTextI18n")
-        fun bind(event: Event) {
-            clientName.text = event.client.name
-            paymentValue.text = event.payment.value.toPtBr()
+        fun bind(hiddenOrVisibleEvent: HiddenOrVisibleEvent) {
+            clientName.text = hiddenOrVisibleEvent.event.client.name
+            paymentValue.text =
+                if (hiddenOrVisibleEvent.visible) hiddenOrVisibleEvent.event.payment.value.toPtBr() else "R$ ******"
         }
     }
 
