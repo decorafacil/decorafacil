@@ -3,13 +3,13 @@ package br.com.decorafacil.ui.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.databinding.ActivityHomeBinding
-import br.com.decorafacil.infra.inmemory.PaymentRepositoryInMemory
-import br.com.decorafacil.repository.PaymentRepository
+import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
+import br.com.decorafacil.repository.EventRepository
 import br.com.decorafacil.ui.recyclerView.PendingPaymentsAdapter
 
 class HomeActivity : AppCompatActivity() {
 
-    private val paymentRepository: PaymentRepository = PaymentRepositoryInMemory()
+    private val eventRepository: EventRepository = EventRepositoryInMemory()
 
     private val binding by lazy {
         ActivityHomeBinding.inflate(layoutInflater);
@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity() {
     private fun configPendingPaymentsRecyclerView() {
         val pendingPaymentsRecyclerViewAdapter = PendingPaymentsAdapter(
             context = this,
-            payments = paymentRepository.findPendingPayments()
+            events = eventRepository.findEventsWithPendingPayments()
         )
         val recyclerView = binding.recyclerViewPendingPayments
         recyclerView.adapter = pendingPaymentsRecyclerViewAdapter
