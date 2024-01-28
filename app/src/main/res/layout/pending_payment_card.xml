@@ -2,11 +2,12 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/buttonFinancial"
     style="@style/Widget.Material3.CardView.Filled"
-    android:layout_width="100dp"
+    android:layout_width="120dp"
     android:layout_height="60dp"
     android:layout_marginEnd="8dp"
+    android:clickable="true"
+    android:focusable="true"
     app:cardBackgroundColor="@color/white">
 
     <LinearLayout
@@ -17,6 +18,7 @@
         android:padding="4dp">
 
         <TextView
+            android:id="@+id/textViewClientName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -28,6 +30,7 @@
             tools:text="Luciana Alves de Souza" />
 
         <TextView
+            android:id="@+id/textViewPaymentValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"

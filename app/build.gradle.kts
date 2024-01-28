@@ -7,6 +7,10 @@ android {
     namespace = "br.com.decorafacil"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "br.com.decorafacil"
         minSdk = 24
