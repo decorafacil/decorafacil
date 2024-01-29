@@ -8,6 +8,7 @@
     android:layout_marginBottom="4dp"
     android:clickable="true"
     android:focusable="true"
+    android:paddingHorizontal="4dp"
     app:cardBackgroundColor="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -66,6 +67,8 @@
             android:maxLines="1"
             android:textColor="#2F2E2E"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@id/ellipse"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Luciana Alves de Souza" />
@@ -81,6 +84,7 @@
             android:maxLines="1"
             android:textColor="#808085"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ellipse"
             app:layout_constraintTop_toBottomOf="@id/textViewClientName"
             tools:text="Rua Governador José Roberto, 1413" />
