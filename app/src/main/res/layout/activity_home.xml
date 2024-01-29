@@ -216,13 +216,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewNextEvents"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="4dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/textViewProximosEventos"
         app:layout_constraintStart_toStartOf="@id/textViewProximosEventos"
         app:layout_constraintTop_toBottomOf="@id/textViewProximosEventos"
-        tools:itemCount="3"
+        app:layout_constraintVertical_bias="0"
+        tools:itemCount="15"
         tools:listitem="@layout/event_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
