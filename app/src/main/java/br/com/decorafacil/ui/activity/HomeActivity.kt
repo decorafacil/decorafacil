@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.R
 import br.com.decorafacil.databinding.ActivityHomeBinding
 import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
+import br.com.decorafacil.infra.inmemory.UserRepositoryInMemory
 import br.com.decorafacil.repository.EventRepository
+import br.com.decorafacil.repository.UserRepository
 import br.com.decorafacil.ui.recyclerView.NextEventsAdapter
 import br.com.decorafacil.ui.recyclerView.PendingPaymentsAdapter
 import br.com.decorafacil.ui.recyclerView.model.HiddenOrVisibleEvent
 
 class HomeActivity : AppCompatActivity() {
 
+    private val userRepository: UserRepository = UserRepositoryInMemory()
     private val eventRepository: EventRepository = EventRepositoryInMemory()
     private val eventsWithPendingPayments = eventRepository.findEventsWithPendingPayments()
     private var isPendingPaymentsVisible = false
@@ -34,9 +37,16 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun configComponents() {
+        configTopBarHelloMessage()
         configPendingPaymentsRecyclerView()
         configNextEventsRecyclerView()
         configEyeToggleVisible()
+    }
+
+    private fun configTopBarHelloMessage() {
+        val helloMessage = binding.textViewHelloMessageTopBar
+        val loggedUser = userRepository.findLoggedUser()
+        helloMessage.text = "Olá, ${loggedUser.companyName}"
     }
 
     private fun configPendingPaymentsRecyclerView() {
