@@ -18,4 +18,12 @@
     <string name="textview_pagamentos_pendentes">Pagamentos pendentes:</string>
     <string name="textview_proximos_eventos">Próximos eventos:</string>
     <string name="eye_hide_values_icon_description">Ícone de olho para esconder valores</string>
+    <string name="help_text_new_event_form_step_one">Adicione as informações do Contratante do seu evento</string>
+    <string name="new_event_personal_information">Informações pessoais:</string>
+    <string name="new_event_client_name">Nome</string>
+    <string name="new_event_client_cpf">CPF</string>
+    <string name="new_event_client_phone_number">Telefone</string>
+    <string name="new_event_client_email">E-mail</string>
+    <string name="new_event_top_bar_title">Novo Evento</string>
+    <string name="next_button">PRÓXIMO</string>
 </resources>

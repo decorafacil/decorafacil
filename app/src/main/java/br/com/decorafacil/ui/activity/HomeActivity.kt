@@ -1,5 +1,6 @@
 package br.com.decorafacil.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.R
@@ -8,6 +9,7 @@ import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
 import br.com.decorafacil.infra.inmemory.UserRepositoryInMemory
 import br.com.decorafacil.repository.EventRepository
 import br.com.decorafacil.repository.UserRepository
+import br.com.decorafacil.ui.activity.form.NewEventStepOne
 import br.com.decorafacil.ui.recyclerView.NextEventsAdapter
 import br.com.decorafacil.ui.recyclerView.PendingPaymentsAdapter
 import br.com.decorafacil.ui.recyclerView.model.HiddenOrVisibleEvent
@@ -41,6 +43,7 @@ class HomeActivity : AppCompatActivity() {
         configPendingPaymentsRecyclerView()
         configNextEventsRecyclerView()
         configEyeToggleVisible()
+        configNewEventButton()
     }
 
     private fun configTopBarHelloMessage() {
@@ -75,6 +78,14 @@ class HomeActivity : AppCompatActivity() {
                 eventsWithPendingPayments.size
             )
             eyeToggle.setImageResource(if (isPendingPaymentsVisible) R.drawable.eye_visible_values else R.drawable.eye_hidden_values)
+        }
+    }
+
+    private fun configNewEventButton() {
+        val buttonNewEvent = binding.buttonNewEvent
+        buttonNewEvent.setOnClickListener {
+            val intent = Intent(this, NewEventStepOne::class.java)
+            startActivity(intent)
         }
     }
 
