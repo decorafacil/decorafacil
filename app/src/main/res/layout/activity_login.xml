@@ -77,11 +77,12 @@
 
     <Button
         android:id="@+id/buttonLogin"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/rounded_button_background"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp"
         android:text="@string/button_login"
         android:textSize="12sp"
         android:textStyle="bold"
