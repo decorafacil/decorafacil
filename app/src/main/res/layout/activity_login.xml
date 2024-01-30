@@ -42,7 +42,7 @@
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +71,7 @@
             android:inputType="textPassword"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,9 +82,9 @@
         android:layout_marginTop="16dp"
         android:clickable="true"
         android:focusable="true"
-        android:padding="16dp"
+        android:padding="14dp"
         android:text="@string/button_login"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/imageViewDecoraFacilLogo"
         app:layout_constraintStart_toStartOf="@id/imageViewDecoraFacilLogo"
@@ -96,6 +96,7 @@
         android:layout_height="wrap_content"
         android:text="@string/checkbox_keep_logged"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/textViewForgotPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/buttonLogin"
@@ -111,6 +112,7 @@
         android:text="@string/text_view_forgot_password"
         android:textColor="@android:color/white"
         android:textColorLink="@android:color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/checkBoxKeepLogged"
         app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
@@ -138,6 +140,7 @@
             android:id="@+id/textViewNaoPossui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="4dp"
             android:text="@string/text_view_nao_possui_conta"
@@ -148,6 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:textSize="16sp"
             android:text="@string/text_view_create_account"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
