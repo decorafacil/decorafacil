@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDF2FA"
-    tools:context=".ui.activity.form.NewEventStepOne">
+    tools:context=".ui.activity.form.NewEventStepOneActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"

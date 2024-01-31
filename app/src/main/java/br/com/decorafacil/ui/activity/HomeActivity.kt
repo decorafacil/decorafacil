@@ -9,7 +9,7 @@ import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
 import br.com.decorafacil.infra.inmemory.UserRepositoryInMemory
 import br.com.decorafacil.repository.EventRepository
 import br.com.decorafacil.repository.UserRepository
-import br.com.decorafacil.ui.activity.form.NewEventStepOne
+import br.com.decorafacil.ui.activity.form.NewEventStepOneActivity
 import br.com.decorafacil.ui.recyclerView.NextEventsAdapter
 import br.com.decorafacil.ui.recyclerView.PendingPaymentsAdapter
 import br.com.decorafacil.ui.recyclerView.model.HiddenOrVisibleEvent
@@ -84,7 +84,7 @@ class HomeActivity : AppCompatActivity() {
     private fun configNewEventButton() {
         val buttonNewEvent = binding.buttonNewEvent
         buttonNewEvent.setOnClickListener {
-            val intent = Intent(this, NewEventStepOne::class.java)
+            val intent = Intent(this, NewEventStepOneActivity::class.java)
             startActivity(intent)
         }
     }

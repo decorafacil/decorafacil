@@ -34,7 +34,7 @@
             android:name=".ui.activity.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activity.form.NewEventStepOne"
+            android:name=".ui.activity.form.NewEventStepOneActivity"
             android:exported="false" />
 
         <meta-data
