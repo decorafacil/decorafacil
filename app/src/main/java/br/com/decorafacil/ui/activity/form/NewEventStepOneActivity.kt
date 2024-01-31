@@ -1,12 +1,16 @@
 package br.com.decorafacil.ui.activity.form
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.decorafacil.R
+import androidx.appcompat.app.AppCompatActivity
+import br.com.decorafacil.databinding.ActivityNewEventStepOneBinding
 
 class NewEventStepOneActivity : AppCompatActivity() {
+    private val binding by lazy {
+        ActivityNewEventStepOneBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_new_event_step_one)
+        setContentView(binding.root)
     }
 }
