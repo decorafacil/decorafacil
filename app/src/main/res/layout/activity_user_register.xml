@@ -32,6 +32,7 @@
                     android:text="@string/textview_user"
                     android:textColor="@color/white"
                     android:textStyle="bold"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -406,12 +407,12 @@
         android:id="@+id/imageButtonSaveUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/blueDefault"
         android:contentDescription="@string/button_save"
         android:padding="18sp"
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/save_button"
+        android:background="@drawable/button_save_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
