@@ -62,11 +62,10 @@
         android:fontFamily="@font/inter"
         android:text="@string/new_event_personal_information"
         android:textColor="#2F2E2E"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
         app:layout_constraintStart_toStartOf="@id/textViewHelpText"
         app:layout_constraintTop_toBottomOf="@id/textViewHelpText" />
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputName"
@@ -75,11 +74,12 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
+        android:textColor="#2F2E2E"
+        android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
         app:boxCornerRadiusTopEnd="24dp"
         app:boxCornerRadiusTopStart="24dp"
-        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@id/textViewPersonalInfos"
         app:layout_constraintStart_toStartOf="@id/textViewPersonalInfos"
         app:layout_constraintTop_toBottomOf="@id/textViewPersonalInfos">
@@ -90,9 +90,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_name"
             android:inputType="text"
-            android:textColor="#2F2E2E"
-            android:textColorHint="#808085"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -102,11 +100,12 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
+        android:textColor="#2F2E2E"
+        android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
         app:boxCornerRadiusTopEnd="24dp"
         app:boxCornerRadiusTopStart="24dp"
-        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@id/textViewPersonalInfos"
         app:layout_constraintStart_toStartOf="@id/textViewPersonalInfos"
         app:layout_constraintTop_toBottomOf="@id/textInputName">
@@ -117,9 +116,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_cpf"
             android:inputType="number"
-            android:textColor="#2F2E2E"
-            android:textColorHint="#808085"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -129,11 +126,12 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
+        android:textColor="#2F2E2E"
+        android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
         app:boxCornerRadiusTopEnd="24dp"
         app:boxCornerRadiusTopStart="24dp"
-        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@id/textViewPersonalInfos"
         app:layout_constraintStart_toStartOf="@id/textViewPersonalInfos"
         app:layout_constraintTop_toBottomOf="@id/textInputCpf">
@@ -144,9 +142,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_phone_number"
             android:inputType="number"
-            android:textColor="#2F2E2E"
-            android:textColorHint="#808085"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -155,11 +151,12 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
+        android:textColor="#2F2E2E"
+        android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
         app:boxCornerRadiusTopEnd="24dp"
         app:boxCornerRadiusTopStart="24dp"
-        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@id/textViewPersonalInfos"
         app:layout_constraintStart_toStartOf="@id/textViewPersonalInfos"
         app:layout_constraintTop_toBottomOf="@id/textInputPhoneNumber">
@@ -170,9 +167,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_email"
             android:inputType="textEmailAddress"
-            android:textColor="#2F2E2E"
-            android:textColorHint="#808085"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
