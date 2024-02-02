@@ -1,5 +1,6 @@
 package br.com.decorafacil.ui.activity.form
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.databinding.ActivityNewEventStepTwoBinding
@@ -35,6 +36,7 @@ class NewEventStepTwoActivity : AppCompatActivity() {
         configEditTextEventDate()
         configEditTextEventStartTime()
         configEditTextEventEndTime()
+        configNextButton()
     }
 
     private fun configEditTextEventDate() {
@@ -87,6 +89,12 @@ class NewEventStepTwoActivity : AppCompatActivity() {
             editTextEndTime.setText("$hourFormatted:$minuteFormatted")
         }
 
+    }
+
+    private fun configNextButton() {
+        binding.buttonNext.setOnClickListener {
+            startActivity(Intent(this, NewEventStepThreeActivity::class.java))
+        }
     }
 
 }

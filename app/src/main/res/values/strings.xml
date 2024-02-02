@@ -57,4 +57,9 @@
     <string name="new_event_end_time">Horário de término</string>
     <string name="new_event_birthday_person_name">Nome do aniversariante</string>
     <string name="new_event_birthday_person_age">Idade a completar</string>
+    <string name="help_text_new_event_form_step_three">Adicione as informações dos Serviços contratados</string>
+    <string name="new_event_services">Serviços:</string>
+    <string name="new_event_service_description">Descrição</string>
+    <string name="new_event_service_value">Valor</string>
+    <string name="new_event_add_service">ADICIONAR</string>
 </resources>
