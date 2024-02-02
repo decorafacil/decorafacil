@@ -20,10 +20,10 @@ class NewEventStepTwoActivity : AppCompatActivity() {
         MaterialDatePicker.Builder.datePicker().setTitleText("Selecione a data").build()
     private val timePickerEventStartTime =
         MaterialTimePicker.Builder().setTimeFormat(timeFormat).setHour(12).setMinute(0)
-            .setTitleText("Select Appointment time").build()
+            .setTitleText("Horário de início").build()
     private val timePickerEventEndTime =
         MaterialTimePicker.Builder().setTimeFormat(timeFormat).setHour(12).setMinute(0)
-            .setTitleText("Select Appointment time").build()
+            .setTitleText("Horário de término").build()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
