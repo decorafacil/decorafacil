@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDF2FA"
+    android:orientation="vertical"
+    tools:context=".ui.activity.form.NewEventStepOneActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#09184D"
+        android:paddingHorizontal="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/new_event_top_bar_title"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/arrow_left_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/help_text_new_event_form_step_two"
+                android:textAlignment="center"
+                android:textColor="#2F2E2E"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewEventInfos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/new_event_event_information"
+                android:textColor="#2F2E2E"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textViewHelpText" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputStreet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textViewEventInfos">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventStreet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_event_street"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventPlaceNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputStreet">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventPlaceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_place_number"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventDistrict"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventPlaceNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_district"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventDistrict">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextClientEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_city"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventState"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventCity">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropDownEventState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_state"
+                    android:inputType="none"
+                    android:text="@string/event_default_state"
+                    android:textColor="@color/black"
+                    app:simpleItems="@array/states" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventComplement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventState">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventComplement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_complement"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventComplement">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_date"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventStartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventDate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_time_start"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEventEndTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventStartTime">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventEndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_end_time"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textViewBirthdayPersonInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/new_event_event_birthday_person_info"
+                android:textColor="#2F2E2E"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventEndTime" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputBirthdayPersonName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textViewBirthdayPersonInfo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextBirthdayPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_birthday_person_name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputBirthdayPersonAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputBirthdayPersonName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextBirthdayPersonAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_birthday_person_age"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttonNext"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="24dp"
+                android:background="#09184D"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputBirthdayPersonAge">
+
+                <TextView
+                    android:id="@+id/textViewNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/next_button"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/arrow_right_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewNext"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

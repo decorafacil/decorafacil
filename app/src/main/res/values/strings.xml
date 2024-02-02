@@ -42,4 +42,19 @@
     <string name="textview_information_address">ENDEREÇO</string>
     <string name="textview_information_password">SENHA</string>
     <string name="edit_text_hint_new_password">Nova senha</string>
+    <string name="help_text_new_event_form_step_two">Adicione as informações do seu Evento</string>
+    <string name="new_event_event_information">Evento:</string>
+    <string name="new_event_event_street">Logradouro</string>
+    <string name="new_event_district">Bairro</string>
+    <string name="new_event_place_number">Número</string>
+    <string name="new_event_city">Cidade</string>
+    <string name="new_event_complement">Complemento</string>
+    <string name="new_event_state">Estado</string>
+    <string name="event_default_state">São Paulo</string>
+    <string name="new_event_event_birthday_person_info">Aniversariante:</string>
+    <string name="new_event_date">Data</string>
+    <string name="new_event_time_start">Horário de início</string>
+    <string name="new_event_end_time">Horário de término</string>
+    <string name="new_event_birthday_person_name">Nome do aniversariante</string>
+    <string name="new_event_birthday_person_age">Idade a completar</string>
 </resources>
