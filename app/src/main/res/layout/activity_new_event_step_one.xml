@@ -74,7 +74,6 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
-        android:textColor="#2F2E2E"
         android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
@@ -90,6 +89,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_name"
             android:inputType="text"
+            android:textColor="#2F2E2E"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,7 +100,6 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
-        android:textColor="#2F2E2E"
         android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
@@ -116,6 +115,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_cpf"
             android:inputType="number"
+            android:textColor="#2F2E2E"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,7 +126,6 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
-        android:textColor="#2F2E2E"
         android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
@@ -142,6 +141,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_phone_number"
             android:inputType="number"
+            android:textColor="#2F2E2E"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -151,7 +151,6 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext_background"
-        android:textColor="#2F2E2E"
         android:textColorHint="#808085"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
@@ -167,6 +166,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/new_event_client_email"
             android:inputType="textEmailAddress"
+            android:textColor="#2F2E2E"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 

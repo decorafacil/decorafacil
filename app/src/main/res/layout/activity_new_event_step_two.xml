@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_event_street"
                     android:inputType="text"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_place_number"
                     android:inputType="text"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_district"
                     android:inputType="number"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_city"
                     android:inputType="text"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -197,7 +197,7 @@
                     android:hint="@string/new_event_state"
                     android:inputType="none"
                     android:text="@string/event_default_state"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     app:simpleItems="@array/states" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -222,7 +222,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_complement"
                     android:inputType="text"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -247,7 +247,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_date"
                     android:inputType="none"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -272,7 +272,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_time_start"
                     android:inputType="none"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -297,7 +297,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_end_time"
                     android:inputType="none"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -335,7 +335,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_birthday_person_name"
                     android:inputType="textPersonName"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -360,7 +360,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_birthday_person_age"
                     android:inputType="number"
-                    android:textColor="@color/black"
+                    android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
