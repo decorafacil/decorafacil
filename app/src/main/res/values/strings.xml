@@ -62,4 +62,9 @@
     <string name="new_event_service_description">Descrição</string>
     <string name="new_event_service_value">Valor</string>
     <string name="new_event_add_service">ADICIONAR</string>
+    <string name="new_event_payment">Pagamento:</string>
+    <string name="new_event_total">Total</string>
+    <string name="new_event_signal">Sinal</string>
+    <string name="new_event_remaining">Restante</string>
+    <string name="save_event">SALVAR</string>
 </resources>

@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDF2FA"
+    android:orientation="vertical"
     tools:context=".ui.activity.form.NewEventStepThreeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="#09184D"
-        android:paddingHorizontal="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:paddingHorizontal="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,110 +36,241 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textViewHelpText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/help_text_new_event_form_step_three"
-        android:textAlignment="center"
-        android:textColor="#2F2E2E"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topBar" />
+        android:layout_height="match_parent"
+        android:fillViewport="false">
 
-    <TextView
-        android:id="@+id/textViewServicesInfos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/new_event_services"
-        android:textColor="#2F2E2E"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
-        app:layout_constraintStart_toStartOf="@id/textViewHelpText"
-        app:layout_constraintTop_toBottomOf="@id/textViewHelpText" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputService"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edittext_background"
-        android:textColorHint="#808085"
-        app:boxCornerRadiusBottomEnd="24dp"
-        app:boxCornerRadiusBottomStart="24dp"
-        app:boxCornerRadiusTopEnd="24dp"
-        app:boxCornerRadiusTopStart="24dp"
-        app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
-        app:layout_constraintStart_toStartOf="@id/textViewHelpText"
-        app:layout_constraintTop_toBottomOf="@id/textViewServicesInfos">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextService"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/new_event_service_description"
-            android:inputType="text"
-            android:textColor="#2F2E2E"
-            android:textSize="18sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/textViewHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/help_text_new_event_form_step_three"
+                android:textAlignment="center"
+                android:textColor="#2F2E2E"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPrice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edittext_background"
-        android:textColorHint="#808085"
-        app:boxCornerRadiusBottomEnd="24dp"
-        app:boxCornerRadiusBottomStart="24dp"
-        app:boxCornerRadiusTopEnd="24dp"
-        app:boxCornerRadiusTopStart="24dp"
-        app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
-        app:layout_constraintStart_toStartOf="@id/textViewHelpText"
-        app:layout_constraintTop_toBottomOf="@id/textInputService">
+            <TextView
+                android:id="@+id/textViewServicesInfos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/new_event_services"
+                android:textColor="#2F2E2E"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textViewHelpText" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPrice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/new_event_service_value"
-            android:inputType="numberDecimal"
-            android:textColor="#2F2E2E"
-            android:textSize="18sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textViewServicesInfos">
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/fabAddService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/new_event_add_service"
-        app:icon="@android:drawable/ic_input_add"
-        app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="@id/textViewHelpText"
-        app:layout_constraintTop_toBottomOf="@id/textInputPrice" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_service_description"
+                    android:inputType="text"
+                    android:textColor="#2F2E2E"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewServices"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
-        app:layout_constraintStart_toStartOf="@id/textViewHelpText"
-        app:layout_constraintTop_toBottomOf="@id/fabAddService"
-        tools:itemCount="10"
-        tools:listitem="@layout/service_item" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textInputService">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_service_value"
+                    android:inputType="numberDecimal"
+                    android:textColor="#2F2E2E"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/fabAddService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/new_event_add_service"
+                app:icon="@android:drawable/ic_input_add"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textInputPrice" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewServices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/fabAddService"
+                tools:itemCount="10"
+                tools:listitem="@layout/service_item" />
+
+            <TextView
+                android:id="@+id/textViewPaymentInfos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/new_event_payment"
+                android:textColor="#2F2E2E"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewServices" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textViewPaymentInfos">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_total"
+                    android:inputType="numberDecimal"
+                    android:textColor="#2F2E2E"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSignal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textInputTotal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextSignal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_signal"
+                    android:inputType="numberDecimal"
+                    android:textColor="#2F2E2E"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputRemaining"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="#808085"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textInputSignal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextRemaining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_remaining"
+                    android:inputType="none"
+                    android:textColor="#2F2E2E"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttonNext"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="24dp"
+                android:background="#09184D"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputRemaining">
+
+                <TextView
+                    android:id="@+id/textViewNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/save_event"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/save_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewNext"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
