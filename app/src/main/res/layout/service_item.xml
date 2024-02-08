@@ -1,32 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Filled"
     android:layout_width="match_parent"
-    android:layout_height="48dp"
+    android:layout_height="60dp"
     android:layout_marginBottom="4dp"
-    android:background="@color/white"
-    android:orientation="horizontal"
-    android:padding="6dp">
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingHorizontal="4dp"
+    app:cardBackgroundColor="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="2"
-        android:ellipsize="end"
-        android:fontFamily="@font/inter"
-        android:maxLines="1"
-        android:textSize="18sp"
-        tools:text="Patatiro e Patatráfico" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="4dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:fontFamily="@font/inter"
-        android:textAlignment="viewEnd"
-        android:textSize="18sp"
-        tools:text="R$ 1.500,00" />
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="1"
+            android:textColor="#2F2E2E"
+            android:textSize="18sp"
+            tools:text="Cupcakes" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textViewValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/inter"
+            android:textAlignment="textEnd"
+            android:textColor="#2F2E2E"
+            android:textSize="18sp"
+            tools:text="R$ 1.500,00" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
