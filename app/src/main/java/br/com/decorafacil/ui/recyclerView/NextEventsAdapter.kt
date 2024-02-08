@@ -15,7 +15,7 @@ class NextEventsAdapter(
 
     private val events = events.toMutableList()
 
-    class ViewHolder(private val binding: EventCardBinding) :
+    class ViewHolder(binding: EventCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
         private val eventDayOfMonth = binding.textViewEventDayOfMonth
         private val eventMonth = binding.textViewEventMonth

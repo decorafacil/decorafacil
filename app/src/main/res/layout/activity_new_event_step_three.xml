@@ -142,6 +142,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
                 app:layout_constraintStart_toStartOf="@id/textViewHelpText"
                 app:layout_constraintTop_toBottomOf="@id/fabAddService"
