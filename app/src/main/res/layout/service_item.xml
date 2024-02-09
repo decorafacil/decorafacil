@@ -25,7 +25,7 @@
             android:ellipsize="end"
             android:fontFamily="@font/inter"
             android:maxLines="1"
-            android:textColor="#2F2E2E"
+            android:textColor="@color/blackInputText"
             android:textSize="18sp"
             tools:text="Cupcakes" />
 
@@ -37,7 +37,7 @@
             android:layout_weight="0.5"
             android:fontFamily="@font/inter"
             android:textAlignment="textEnd"
-            android:textColor="#2F2E2E"
+            android:textColor="@color/blackInputText"
             android:textSize="18sp"
             tools:text="R$ 1.500,00" />
     </LinearLayout>

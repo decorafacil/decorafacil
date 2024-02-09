@@ -3,5 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blueDefault">#09184D</color>
-
+    <color name="blackInputText">#2F2E2E</color>
+    <color name="whiteBackgroundDefault">#EDF2FA</color>
+    <color name="purple">#7B5BF2</color>
+    <color name="gray">#40FFFFFF</color>
 </resources>

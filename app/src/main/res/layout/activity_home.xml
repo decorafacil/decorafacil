@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDF2FA">
+    android:background="@color/whiteBackgroundDefault">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#09184D"
+        android:background="@color/blueDefault"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -162,7 +162,7 @@
         android:fontFamily="@font/inter"
         android:gravity="start"
         android:text="@string/textview_pagamentos_pendentes"
-        android:textColor="#2F2E2E"
+        android:textColor="@color/blackInputText"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -206,7 +206,7 @@
         android:fontFamily="@font/inter"
         android:gravity="start"
         android:text="@string/textview_proximos_eventos"
-        android:textColor="#2F2E2E"
+        android:textColor="@color/blackInputText"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/recyclerViewPendingPayments"
         app:layout_constraintHorizontal_bias="0"
