@@ -78,12 +78,12 @@ class NewEventStepThreeActivity : AppCompatActivity() {
                     BigDecimal(binding.editTextRemaining.text.toString())
                 ),
                 timetable = EventTimetable(
-                    LocalTime.parse(stepTwoData.eventTimeStart),
-                    LocalTime.parse(stepTwoData.eventTimeEnd),
                     LocalDate.parse(
                         stepTwoData.eventDate,
                         DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale("pt", "BR"))
-                    )
+                    ),
+                    LocalTime.parse(stepTwoData.eventTimeStart),
+                    LocalTime.parse(stepTwoData.eventTimeEnd)
                 ),
                 address = Address(
                     stepTwoData.eventStreet,
