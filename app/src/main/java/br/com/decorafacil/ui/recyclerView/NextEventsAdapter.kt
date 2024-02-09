@@ -26,7 +26,7 @@ class NextEventsAdapter(
         fun bind(event: Event) {
             eventDayOfMonth.text = event.timetable.date.dayOfMonth.toString()
             eventMonth.text = event.timetable.date.month.toPtBr().substring(0, 3)
-            clientName.text = event.client.name
+            clientName.text = event.client.contractor
             eventAddress.text = event.address.toString()
             eventTimetable.text = "${event.timetable.startTime} - ${event.timetable.endTime}"
         }

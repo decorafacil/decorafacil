@@ -46,4 +46,8 @@ class EventServicesAdapter(
         notifyItemInserted(0)
     }
 
+    fun getServices(): List<Service> {
+        return services.toList()
+    }
+
 }

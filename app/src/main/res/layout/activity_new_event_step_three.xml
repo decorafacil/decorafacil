@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EDF2FA"
     android:orientation="vertical"
-    tools:context=".ui.activity.form.NewEventStepThreeActivity">
+    tools:context=".ui.activity.form.newevent.NewEventStepThreeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -238,7 +238,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/buttonNext"
+                android:id="@+id/buttonSave"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:layout_marginTop="24dp"

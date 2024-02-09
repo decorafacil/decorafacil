@@ -23,7 +23,7 @@ class PendingPaymentsAdapter(
 
         @SuppressLint("SetTextI18n")
         fun bind(hiddenOrVisibleEvent: HiddenOrVisibleEvent) {
-            clientName.text = hiddenOrVisibleEvent.event.client.name
+            clientName.text = hiddenOrVisibleEvent.event.client.contractor
             paymentValue.text =
                 if (hiddenOrVisibleEvent.visible) hiddenOrVisibleEvent.event.payment.value.toPtBr() else "R$ ******"
         }

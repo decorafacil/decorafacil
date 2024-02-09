@@ -1,4 +1,8 @@
 package br.com.decorafacil.models
 
-class Client(val name: String)
-{}
+// TODO - os parâmetros devem ser obrigatórios
+class Client(
+    val contractor: String,
+    val birthdayPersoname: String = "",
+    val birthdayPersonAgeToComplete: Int = 0
+) {}

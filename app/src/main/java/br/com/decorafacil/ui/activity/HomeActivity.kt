@@ -9,7 +9,7 @@ import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
 import br.com.decorafacil.infra.inmemory.UserRepositoryInMemory
 import br.com.decorafacil.repository.EventRepository
 import br.com.decorafacil.repository.UserRepository
-import br.com.decorafacil.ui.activity.form.NewEventStepOneActivity
+import br.com.decorafacil.ui.activity.form.newevent.NewEventStepOneActivity
 import br.com.decorafacil.ui.recyclerView.NextEventsAdapter
 import br.com.decorafacil.ui.recyclerView.PendingPaymentsAdapter
 import br.com.decorafacil.ui.recyclerView.model.HiddenOrVisibleEvent

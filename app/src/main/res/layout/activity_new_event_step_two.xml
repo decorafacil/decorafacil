@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EDF2FA"
     android:orientation="vertical"
-    tools:context=".ui.activity.form.NewEventStepOneActivity">
+    tools:context=".ui.activity.form.newevent.NewEventStepOneActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
@@ -144,7 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_district"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:textColor="#2F2E2E"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -165,7 +165,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textInputEventDistrict">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextClientEmail"
+                    android:id="@+id/editTextEventCity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_city"

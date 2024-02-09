@@ -34,13 +34,13 @@
             android:name=".ui.activity.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activity.form.NewEventStepOneActivity"
+            android:name=".ui.activity.form.newevent.NewEventStepOneActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.form.NewEventStepTwoActivity"
+            android:name=".ui.activity.form.newevent.NewEventStepTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.form.NewEventStepThreeActivity"
+            android:name=".ui.activity.form.newevent.NewEventStepThreeActivity"
             android:exported="false" />
 
         <meta-data

@@ -1,9 +1,11 @@
-package br.com.decorafacil.ui.activity.form
+package br.com.decorafacil.ui.activity.form.newevent
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.databinding.ActivityNewEventStepTwoBinding
+import br.com.decorafacil.ui.activity.form.newevent.data.StepOneData
+import br.com.decorafacil.ui.activity.form.newevent.data.StepTwoData
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
@@ -93,7 +95,28 @@ class NewEventStepTwoActivity : AppCompatActivity() {
 
     private fun configNextButton() {
         binding.buttonNext.setOnClickListener {
-            startActivity(Intent(this, NewEventStepThreeActivity::class.java))
+            startActivity(Intent(this, NewEventStepThreeActivity::class.java).apply {
+                putExtra(
+                    "stepOneData",
+                    intent.getParcelableExtra<StepOneData>("stepOneData")
+                )
+                putExtra(
+                    "stepTwoData",
+                    StepTwoData(
+                        binding.editTextEventStreet.text.toString(),
+                        binding.editTextEventPlaceNumber.text.toString(),
+                        binding.editTextEventDistrict.text.toString(),
+                        binding.editTextEventCity.text.toString(),
+                        binding.dropDownEventState.text.toString(),
+                        binding.editTextEventComplement.text.toString(),
+                        binding.editTextEventDate.text.toString(),
+                        binding.editTextEventStartTime.text.toString(),
+                        binding.editTextEventEndTime.text.toString(),
+                        binding.editTextBirthdayPersonName.text.toString(),
+                        binding.editTextBirthdayPersonAge.text.toString(),
+                    )
+                )
+            })
         }
     }
 
