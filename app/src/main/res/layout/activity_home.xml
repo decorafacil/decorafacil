@@ -20,7 +20,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:fontFamily="@font/inter"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -71,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:fontFamily="@font/inter"
+
                 android:text="@string/card_button_new_event"
                 android:textColor="#808085"
                 android:textSize="12sp" />
@@ -108,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:fontFamily="@font/inter"
+
                 android:text="@string/card_button_schedule"
                 android:textColor="#808085"
                 android:textSize="12sp" />
@@ -145,7 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:fontFamily="@font/inter"
+
                 android:text="@string/card_button_financial"
                 android:textColor="#808085"
                 android:textSize="12sp" />
@@ -159,7 +158,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/inter"
+
         android:gravity="start"
         android:text="@string/textview_pagamentos_pendentes"
         android:textColor="@color/blackInputText"
@@ -203,7 +202,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/inter"
+
         android:gravity="start"
         android:text="@string/textview_proximos_eventos"
         android:textColor="@color/blackInputText"
