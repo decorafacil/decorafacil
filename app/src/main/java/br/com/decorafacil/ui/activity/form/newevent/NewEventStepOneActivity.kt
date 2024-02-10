@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.databinding.ActivityNewEventStepOneBinding
+import br.com.decorafacil.ui.activity.HomeActivity
 import br.com.decorafacil.ui.activity.form.newevent.data.StepOneData
 
 class NewEventStepOneActivity : AppCompatActivity() {
@@ -18,6 +19,11 @@ class NewEventStepOneActivity : AppCompatActivity() {
     }
 
     private fun configComponents() {
+        configButtonNext()
+        configButtonBack()
+    }
+
+    private fun configButtonNext() {
         binding.buttonNext.setOnClickListener {
             startActivity(Intent(this, NewEventStepTwoActivity::class.java).apply {
                 putExtra(
@@ -30,6 +36,12 @@ class NewEventStepOneActivity : AppCompatActivity() {
                     )
                 )
             })
+        }
+    }
+
+    private fun configButtonBack() {
+        binding.imageViewArrowLeft.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
         }
     }
 

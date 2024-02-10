@@ -30,6 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/imageViewArrowLeft"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:src="@drawable/arrow_left_icon"

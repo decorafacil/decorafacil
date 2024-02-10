@@ -40,6 +40,7 @@ class NewEventStepThreeActivity : AppCompatActivity() {
         configRecyclerViewServices()
         configFabAddService()
         configSaveButton()
+        configButtonBack()
     }
 
     private fun configFabAddService() {
@@ -101,4 +102,9 @@ class NewEventStepThreeActivity : AppCompatActivity() {
         }
     }
 
+    private fun configButtonBack() {
+        binding.imageViewArrowLeft.setOnClickListener {
+            startActivity(Intent(this, NewEventStepTwoActivity::class.java))
+        }
+    }
 }

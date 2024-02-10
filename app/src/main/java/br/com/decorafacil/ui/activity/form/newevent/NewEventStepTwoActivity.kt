@@ -39,6 +39,7 @@ class NewEventStepTwoActivity : AppCompatActivity() {
         configEditTextEventStartTime()
         configEditTextEventEndTime()
         configNextButton()
+        configButtonBack()
     }
 
     private fun configEditTextEventDate() {
@@ -121,4 +122,9 @@ class NewEventStepTwoActivity : AppCompatActivity() {
         }
     }
 
+    private fun configButtonBack() {
+        binding.imageViewArrowLeft.setOnClickListener {
+            startActivity(Intent(this, NewEventStepOneActivity::class.java))
+        }
+    }
 }
