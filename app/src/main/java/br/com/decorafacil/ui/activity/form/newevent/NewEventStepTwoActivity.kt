@@ -103,6 +103,7 @@ class NewEventStepTwoActivity : AppCompatActivity() {
                 putExtra(
                     "stepTwoData",
                     StepTwoData(
+                        binding.editTextEventZipCode.text.toString(),
                         binding.editTextEventStreet.text.toString(),
                         binding.editTextEventPlaceNumber.text.toString(),
                         binding.editTextEventDistrict.text.toString(),

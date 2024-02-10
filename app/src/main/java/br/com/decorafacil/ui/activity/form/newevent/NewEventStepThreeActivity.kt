@@ -91,7 +91,7 @@ class NewEventStepThreeActivity : AppCompatActivity() {
                     stepTwoData.eventCity,
                     stepTwoData.eventState,
                     stepTwoData.eventPlaceNumber,
-                    "", // TODO - adicionar o CEP a interface
+                    stepTwoData.eventZipCode,
                     stepTwoData.eventComplement
                 ),
                 services = eventServiceAdapter.getServices()

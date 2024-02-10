@@ -73,7 +73,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textViewHelpText" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputStreet"
+                android:id="@+id/textInputZipCode"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -86,6 +86,31 @@
                 app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
                 app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
                 app:layout_constraintTop_toBottomOf="@id/textViewEventInfos">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEventZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_event_zip_code"
+                    android:inputType="text"
+                    android:textColor="@color/blackInputText"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputStreet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="@color/grayHint"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
+                app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
+                app:layout_constraintTop_toBottomOf="@id/textInputZipCode">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextEventStreet"

@@ -5,6 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class StepTwoData(
+    val eventZipCode: String,
     val eventStreet: String,
     val eventPlaceNumber: String,
     val eventDistrict: String,
