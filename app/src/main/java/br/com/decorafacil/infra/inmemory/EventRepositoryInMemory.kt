@@ -43,5 +43,4 @@ class EventRepositoryInMemory : EventRepository {
     override fun save(event: Event) {
         events.add(event)
     }
-
 }

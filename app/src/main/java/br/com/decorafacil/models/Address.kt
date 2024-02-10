@@ -13,5 +13,4 @@ class Address(
     override fun toString(): String {
         return "$street, $number $complement, $district, $city - $state, CEP: $zipCode"
     }
-
 }

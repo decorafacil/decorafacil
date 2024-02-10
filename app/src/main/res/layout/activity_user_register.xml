@@ -10,7 +10,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,8 +34,8 @@
                     android:padding="16dp"
                     android:text="@string/textview_user"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
                     android:textSize="18sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -78,6 +80,7 @@
                 app:layout_constraintTop_toBottomOf="@id/profile_image">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextFantasyName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
@@ -115,6 +118,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textViewPersonalInformation">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
@@ -141,6 +145,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldName">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserCpf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -166,9 +171,10 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldCpf">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="18sp" />
@@ -191,9 +197,10 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldPhoneNumber">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="18sp" />
@@ -209,10 +216,35 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/textFieldStreetAddress"
                 app:layout_constraintEnd_toEndOf="@id/textFieldStreetAddress"
                 app:layout_constraintStart_toStartOf="@id/textFieldStreetAddress"
                 app:layout_constraintTop_toBottomOf="@id/textFieldEmail" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldZipCode"
+                android:layout_width="363dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="24dp"
+                android:hint="CEP"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewAddressInformation">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textFieldStreetAddress"
@@ -228,9 +260,10 @@
                 app:boxCornerRadiusTopStart="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textViewAddressInformation">
+                app:layout_constraintTop_toBottomOf="@id/textFieldZipCode">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserStreetAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
@@ -255,9 +288,10 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldStreetAddress">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserAddressNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="18sp" />
@@ -279,6 +313,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldNumberAddress">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserDistrict"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
@@ -303,6 +338,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldNeighborhood">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserComplement"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
@@ -327,12 +363,40 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldComplement">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserCity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputUserState"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColorHint="@color/grayHint"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:layout_constraintEnd_toEndOf="@id/textFieldCity"
+                app:layout_constraintStart_toStartOf="@id/textFieldCity"
+                app:layout_constraintTop_toBottomOf="@id/textFieldCity">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropDownUserState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_event_state"
+                    android:inputType="none"
+                    android:text="@string/event_default_state"
+                    android:textColor="@color/blackInputText"
+                    app:simpleItems="@array/states" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -345,9 +409,9 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/textFieldCity"
-                app:layout_constraintStart_toStartOf="@id/textFieldCity"
-                app:layout_constraintTop_toBottomOf="@id/textFieldCity" />
+                app:layout_constraintEnd_toEndOf="@id/textInputUserState"
+                app:layout_constraintStart_toStartOf="@id/textInputUserState"
+                app:layout_constraintTop_toBottomOf="@id/textInputUserState" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textFieldFillPassword"
@@ -366,6 +430,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textViewPassword">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -393,6 +458,7 @@
                 app:layout_constraintTop_toBottomOf="@id/textFieldFillPassword">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserNewPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -408,12 +474,12 @@
         android:id="@+id/imageButtonSaveUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/button_save"
-        android:padding="18sp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/save_button"
         android:background="@drawable/button_save_background"
+        android:clickable="true"
+        android:contentDescription="@string/button_save"
+        android:focusable="true"
+        android:padding="18sp"
+        android:src="@drawable/save_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
