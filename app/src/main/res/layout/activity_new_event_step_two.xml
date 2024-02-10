@@ -224,6 +224,18 @@
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <TextView
+                android:id="@+id/textViewEventDateAndTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/new_event_event_datetime_infos"
+                android:textColor="@color/blackInputText"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
+                app:layout_constraintStart_toStartOf="@id/textViewHelpText"
+                app:layout_constraintTop_toBottomOf="@id/textInputEventComplement" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputEventDate"
                 android:layout_width="0dp"
@@ -237,7 +249,7 @@
                 app:boxCornerRadiusTopStart="24dp"
                 app:layout_constraintEnd_toEndOf="@id/textViewEventInfos"
                 app:layout_constraintStart_toStartOf="@id/textViewEventInfos"
-                app:layout_constraintTop_toBottomOf="@id/textInputEventComplement">
+                app:layout_constraintTop_toBottomOf="@id/textViewEventDateAndTime">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextEventDate"

@@ -43,7 +43,7 @@
     <string name="textview_information_password">SENHA</string>
     <string name="edit_text_hint_new_password">Nova senha</string>
     <string name="help_text_new_event_form_step_two">Adicione as informações do seu Evento</string>
-    <string name="new_event_event_information">Evento:</string>
+    <string name="new_event_event_information">Local do evento:</string>
     <string name="new_event_event_street">Logradouro</string>
     <string name="new_event_district">Bairro</string>
     <string name="new_event_place_number">Número</string>
@@ -67,4 +67,5 @@
     <string name="new_event_signal">Sinal</string>
     <string name="new_event_remaining">Restante</string>
     <string name="save_event">SALVAR</string>
+    <string name="new_event_event_datetime_infos">Data e hora:</string>
 </resources>
