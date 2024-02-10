@@ -72,7 +72,7 @@
                 android:layout_marginTop="4dp"
 
                 android:text="@string/card_button_new_event"
-                android:textColor="#808085"
+                android:textColor="@color/grayHint"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -109,7 +109,7 @@
                 android:layout_marginTop="4dp"
 
                 android:text="@string/card_button_schedule"
-                android:textColor="#808085"
+                android:textColor="@color/grayHint"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -146,7 +146,7 @@
                 android:layout_marginTop="4dp"
 
                 android:text="@string/card_button_financial"
-                android:textColor="#808085"
+                android:textColor="@color/grayHint"
                 android:textSize="12sp" />
 
         </LinearLayout>

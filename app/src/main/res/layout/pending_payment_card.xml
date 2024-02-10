@@ -24,7 +24,7 @@
             android:layout_marginTop="4dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textColor="#808085"
+            android:textColor="@color/grayHint"
             android:textSize="14sp"
             tools:text="Luciana Alves de Souza" />
 
