@@ -10,6 +10,7 @@ import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -52,7 +53,11 @@ class NewEventStepTwoActivity : AppCompatActivity() {
         }
         datePickerEventDate.addOnPositiveButtonClickListener { selection ->
             val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale("pt", "BR"))
-            val formattedDate = dateFormat.format(Date(selection))
+            // TODO - Extrair trecho abaixo para um local dedicado
+            val calendar = Calendar.getInstance()
+            calendar.time = Date(selection) // TODO - verificar por que Date(selection) é sempre a data -1 dia
+            calendar.add(Calendar.DAY_OF_MONTH, 1)
+            val formattedDate = dateFormat.format(calendar.time)
             editTextDate.setText(formattedDate)
         }
     }
