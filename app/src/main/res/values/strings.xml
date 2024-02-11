@@ -69,4 +69,5 @@
     <string name="save_event">SALVAR</string>
     <string name="new_event_event_datetime_infos">Data e hora:</string>
     <string name="new_event_event_zip_code">CEP</string>
+    <string name="edit_text_hint_cep">CEP</string>
 </resources>
