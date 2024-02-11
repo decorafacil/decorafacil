@@ -19,6 +19,7 @@ class EventServicesAdapter(
         RecyclerView.ViewHolder(binding.root) {
         private val description = binding.textViewDescription
         private val value = binding.textViewValue
+        val deleteIcon = binding.imageViewDelete
 
         fun bind(service: Service) {
             description.text = service.description
@@ -39,6 +40,9 @@ class EventServicesAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(services[position])
+        holder.deleteIcon.setOnClickListener {
+            removeService(holder.adapterPosition)
+        }
     }
 
     fun addItem(service: Service) {
@@ -50,4 +54,8 @@ class EventServicesAdapter(
         return services.toList()
     }
 
+    private fun removeService(position: Int) {
+        services.removeAt(position)
+        notifyItemRemoved(position)
+    }
 }

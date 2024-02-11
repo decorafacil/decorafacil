@@ -21,7 +21,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@color/blackInputText"
@@ -33,10 +33,18 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.5"
+            android:layout_weight="2"
             android:textAlignment="textEnd"
             android:textColor="@color/blackInputText"
             android:textSize="18sp"
             tools:text="R$ 1.500,00" />
+
+        <ImageView
+            android:id="@+id/imageViewDelete"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delete_40px" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
