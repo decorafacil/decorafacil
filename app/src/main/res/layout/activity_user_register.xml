@@ -71,6 +71,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_fantasy_name"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -85,7 +86,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,6 +109,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_name"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -124,7 +125,6 @@
                     android:layout_marginTop="2dp"
                     android:inputType="text"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,6 +136,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_cpf"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -150,7 +151,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -162,6 +162,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_phone_number"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -176,7 +177,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -188,6 +188,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_email"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -202,7 +203,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -228,6 +228,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="24dp"
                 android:hint="CEP"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -242,7 +243,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -254,6 +254,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_street_address"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -268,7 +269,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -279,6 +279,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_number_address"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -293,7 +294,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -304,6 +304,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_neighborhood"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -318,7 +319,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -329,6 +329,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_complement"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -343,7 +344,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -354,6 +354,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_city"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -420,6 +421,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:hint="@string/edit_text_hint_password"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -435,7 +437,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -447,6 +448,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="160dp"
                 android:hint="@string/edit_text_hint_new_password"
+                android:textColorHint="@color/grayHint"
                 app:boxCornerRadiusBottomEnd="24dp"
                 app:boxCornerRadiusBottomStart="24dp"
                 app:boxCornerRadiusTopEnd="24dp"
@@ -463,7 +465,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
