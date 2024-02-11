@@ -47,26 +47,40 @@ class UserRegisterActivity : AppCompatActivity() {
             val email = findViewById<EditText>(R.id.editTextUserEmail).text.toString()
 
             val street = findViewById<EditText>(R.id.editTextUserStreetAddress).text.toString()
-            val addressNumber = findViewById<EditText>(R.id.editTextUserAddressNumber).text.toString()
+            val addressNumber =
+                findViewById<EditText>(R.id.editTextUserAddressNumber).text.toString()
             val district = findViewById<EditText>(R.id.editTextUserDistrict).text.toString()
             val complement = findViewById<EditText>(R.id.editTextUserComplement).text.toString()
             val city = findViewById<EditText>(R.id.editTextUserCity).text.toString()
 
-            val address = Address(street, district, city, "", addressNumber, "")
+            val address = Address(street, district, city, "", addressNumber, "", complement)
 
-            val password = findViewById<EditText>(R.id.editTextUserPassword).text.toString()
-            // TODO - Criar validação - Confirmar senha / Nova senha
-            val newPassword = findViewById<EditText>(R.id.editTextUserNewPassword).text.toString()
+            var password = findViewById<EditText>(R.id.editTextUserPassword).text.toString()
+            var confirmPassword = findViewById<EditText>(R.id.editTextUserConfirmPassword).text.toString()
 
-            val user = User(fantasyName, name, cpf, phoneNumber, email, address, password)
+            if (password == confirmPassword) {
+                val user = User(
+                    fantasyName,
+                    name,
+                    cpf,
+                    phoneNumber,
+                    email,
+                    address,
+                    password,
+                    confirmPassword
+                )
 
-            try {
-                userRepository.save(user)
-            } catch (e: Exception) {
-                throw Exception("Erro ao tentar salvar um novo usuário. Mensagem de erro: " + e.message)
+                try {
+                    userRepository.save(user)
+                } catch (e: Exception) {
+                    throw Exception("Erro ao tentar salvar um novo usuário. Mensagem de erro: " + e.message)
+                }
+
+                backToHomeActivity()
+            } else {
+                Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show()
             }
 
-            backToHomeActivity()
         }
     }
 

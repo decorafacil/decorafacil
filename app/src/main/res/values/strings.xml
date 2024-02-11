@@ -41,7 +41,7 @@
     <string name="edit_text_hint_neighborhood">Bairro</string>
     <string name="textview_information_address">ENDEREÇO</string>
     <string name="textview_information_password">SENHA</string>
-    <string name="edit_text_hint_new_password">Nova senha</string>
+    <string name="edit_text_hint_confirm_password">Confirmar senha</string>
     <string name="help_text_new_event_form_step_two">Adicione as informações do seu Evento</string>
     <string name="new_event_event_information">Local do evento:</string>
     <string name="new_event_event_street">Logradouro</string>

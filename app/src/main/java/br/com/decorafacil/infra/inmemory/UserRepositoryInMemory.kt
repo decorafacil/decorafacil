@@ -16,6 +16,7 @@ class UserRepositoryInMemory : UserRepository {
                     "123",
                     "teste@teste.com",
                     Address("RUA", "Bairro", "Cidade", "estado", "123", "123", "complemento"),
+                    "123",
                     "123"
                 )
             )

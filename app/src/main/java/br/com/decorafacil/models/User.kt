@@ -7,6 +7,7 @@ class User(
     val phoneNumber: String,
     val email: String,
     val address: Address,
-    val password: String
+    val password: String,
+    val confirmPassword: String
 ) {
 }
