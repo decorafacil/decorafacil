@@ -37,7 +37,7 @@
     <string name="edit_text_hint_city">Cidade</string>
     <string name="button_save">Salvar</string>
     <string name="edit_text_hint_street_address">Logradouro</string>
-    <string name="edit_text_hint_number_address">N°</string>
+    <string name="edit_text_hint_number_address">Número</string>
     <string name="edit_text_hint_neighborhood">Bairro</string>
     <string name="textview_information_address">ENDEREÇO</string>
     <string name="textview_information_password">SENHA</string>
