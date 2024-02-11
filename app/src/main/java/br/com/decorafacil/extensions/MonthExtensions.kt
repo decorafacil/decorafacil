@@ -1,4 +1,4 @@
-package br.com.decorafacil.extension
+package br.com.decorafacil.extensions
 import java.time.Month
 
 fun Month.toPtBr(): String {

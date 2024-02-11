@@ -1,4 +1,4 @@
-package br.com.decorafacil.extension
+package br.com.decorafacil.extensions
 
 import java.math.BigDecimal
 import java.text.NumberFormat

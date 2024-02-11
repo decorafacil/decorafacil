@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.decorafacil.databinding.PendingPaymentCardBinding
-import br.com.decorafacil.extension.toPtBr
+import br.com.decorafacil.extensions.toPtBr
 import br.com.decorafacil.ui.recyclerView.model.HiddenOrVisibleEvent
 
 class PendingPaymentsAdapter(

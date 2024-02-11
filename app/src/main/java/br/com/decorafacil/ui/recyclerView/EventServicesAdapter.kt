@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.decorafacil.databinding.ServiceItemBinding
-import br.com.decorafacil.extension.toPtBr
+import br.com.decorafacil.extensions.toPtBr
 import br.com.decorafacil.models.Service
 
 class EventServicesAdapter(
