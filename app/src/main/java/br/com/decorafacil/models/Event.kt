@@ -6,4 +6,9 @@ class Event(
     val timetable: EventTimetable,
     val address: Address,
     val services: List<Service> = emptyList()
-) {}
+) {
+
+    override fun toString(): String {
+        return "$address\n$timetable\nAniversariante: ${client.birthdayPersonName}"
+    }
+}

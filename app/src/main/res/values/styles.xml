@@ -17,4 +17,43 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <!--  Dialog  -->
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.Material3">
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <!--  Title Dialog  -->
+    <style name="MaterialAlertDialog.App.Title.Text" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--  Body Dialog  -->
+    <style name="MaterialAlertDialog.App.Body.Text" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColor">@color/grayHint</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <!--  Button Neutral Dialog  -->
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/purple</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Alert.Button</item>
+    </style>
+
+    <!--  Button Negative Dialog  -->
+    <style name="Alert.Button.Negative" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/salmon</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Alert.Button</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ShapeAppearance.Alert.Button" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">96dp</item>
+    </style>
 </resources>

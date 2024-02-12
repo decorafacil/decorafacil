@@ -11,6 +11,6 @@ class Address(
 ) {
 
     override fun toString(): String {
-        return "$street, $number $complement, $district, $city - $state, CEP: $zipCode"
+        return "$street, $number${if (complement != "") "" + complement else ""}, $district, $city - $state, CEP: $zipCode"
     }
 }
