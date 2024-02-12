@@ -13,24 +13,21 @@ import java.time.LocalTime
 class EventRepositoryInMemory : EventRepository {
 
     companion object {
-        var events = mutableListOf<Event>()
+        var events = mutableListOf(
+            Event(Client("Lucas Silva", "Enzo da Silva", 6), Payment(BigDecimal("1200")), EventTimetable(LocalDate.of(2024, 3, 22), LocalTime.of(17, 0), LocalTime.of(23, 0)), Address("Rua da Paz", "Bela Vista", "Cidade Tranquila", "Minas Gerais", "45", "78901234")),
+            Event(Client("Ana Oliveira", "Pedro Oliveira", 3), Payment(BigDecimal("900")), EventTimetable(LocalDate.of(2024, 4, 15), LocalTime.of(14, 0), LocalTime.of(20, 0)), Address("Avenida Principal", "Centro", "Cidade Serena", "São Paulo", "22", "56789012")),
+            Event(Client("Carlos Pereira", "Mariana Pereira", 4), Payment(BigDecimal("1500")), EventTimetable(LocalDate.of(2024, 5, 10), LocalTime.of(18, 30), LocalTime.of(22, 0)), Address("Rua das Flores", "Jardim Feliz", "Cidade Alegre", "Rio de Janeiro", "33", "12345678")),
+            Event(Client("Fernanda Santos", "Rafael Santos", 2), Payment(BigDecimal("800")), EventTimetable(LocalDate.of(2024, 6, 5), LocalTime.of(15, 0), LocalTime.of(19, 0)), Address("Rua das Estrelas", "Vila Nova", "Cidade Radiante", "Bahia", "10", "98765432")),
+            Event(Client("Gabriel Lima", "Isabela Lima", 5), Payment(BigDecimal("2000")), EventTimetable(LocalDate.of(2024, 7, 20), LocalTime.of(19, 0), LocalTime.of(23, 30)), Address("Avenida dos Sonhos", "Lagoa Azul", "Cidade Encantada", "Ceará", "55", "23456789")),
+            Event(Client("Juliana Silva", "Ricardo Silva", 1), Payment(BigDecimal("600")), EventTimetable(LocalDate.of(2024, 8, 12), LocalTime.of(16, 0), LocalTime.of(21, 0)), Address("Travessa das Maravilhas", "Monte Verde", "Cidade Fantástica", "Paraná", "15", "87654321")),
+            Event(Client("Marcos Oliveira", "Carla Oliveira", 7), Payment(BigDecimal("1800")), EventTimetable(LocalDate.of(2024, 9, 8), LocalTime.of(20, 0), LocalTime.of(1, 0)), Address("Rua dos Desejos", "Vale Feliz", "Cidade Mágica", "Santa Catarina", "28", "54321098")),
+            Event(Client("Patricia Pereira", "Guilherme Pereira", 3), Payment(BigDecimal("1200")), EventTimetable(LocalDate.of(2024, 10, 3), LocalTime.of(17, 30), LocalTime.of(22, 30)), Address("Avenida das Maravilhas", "Serra Azul", "Cidade dos Sonhos", "Goiás", "18", "10293847")),
+            Event(Client("Rafaela Santos", "João Santos", 2), Payment(BigDecimal("950")), EventTimetable(LocalDate.of(2024, 11, 25), LocalTime.of(14, 30), LocalTime.of(18, 0)), Address("Rua das Ilusões", "Cidade das Águas", "Cidade Iluminada", "Espírito Santo", "40", "67584930")),
+            Event(Client("Thiago Lima", "Larissa Lima", 4), Payment(BigDecimal("1300")), EventTimetable(LocalDate.of(2024, 12, 18), LocalTime.of(18, 0), LocalTime.of(22, 30)), Address("Alameda dos Encantos", "Vila Encantada", "Cidade dos Anjos", "Roraima", "9", "38475629")),
+        )
     }
 
     override fun findEventsWithPendingPayments(): List<Event> {
-//        events = mutableListOf(
-//            Event(Client("Lucas Silva"), Payment(BigDecimal("1200")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 3, 22)), Address("Rua da Paz", "Bela Vista", "Cidade Tranquila", "Minas Gerais", "45", "78901234")),
-//            Event(Client("Ana Souza Oliveira"), Payment(BigDecimal("950")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 4, 17)), Address("Rua Principal", "Vila Feliz", "Cidade Felicidade", "Bahia", "20", "56789012")),
-//            Event(Client("Maria Oliveira Santos"), Payment(BigDecimal("800")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 2, 9)), Address("Avenida Brasil", "Centro", "Cidade Alegre", "Rio de Janeiro", "123", "12345678")),
-//            Event(Client("Fernanda Santos"), Payment(BigDecimal("1300")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 5, 5)), Address("Rua da Amizade", "América", "Cidade Amiga", "Santa Catarina", "10", "34567890")),
-//            Event(Client("Carlos Santos"), Payment(BigDecimal("900")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 8, 7)), Address("Avenida da Esperança", "Esperança", "Cidade Esperançosa", "Rio Grande do Sul", "15", "01234567")),
-//            Event(Client("Rodrigo Silva Costa"), Payment(BigDecimal("950")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 10, 10)), Address("Avenida da Juventude", "Jovem", "Cidade Jovial", "Pernambuco", "18", "45678901")),
-//            Event(Client("Camila Souza"), Payment(BigDecimal("1200")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 11, 11)), Address("Rua dos Sonhos", "Sonho Real", "Cidade dos Sonhos", "Goiás", "22", "56789012")),
-//            Event(Client("Larissa Costa"), Payment(BigDecimal("850")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 9, 12)), Address("Rua do Sol", "Sol Nascente", "Cidade do Sol", "Ceará", "25", "23456789")),
-//            Event(Client("Rafael Oliveira"), Payment(BigDecimal("1100")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 6, 4)), Address("Avenida Central", "Jardim Botânico", "Cidade das Flores", "Paraná", "56", "67890123")),
-//            Event(Client("Pedro Henrique Pereira"), Payment(BigDecimal("1150")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 1, 30)), Address("Rua Governador da Silva", "Jd. das Flores", "Itapetininga", "São Paulo", "77", "45669890")),
-//            Event(Client("Amanda Lima"), Payment(BigDecimal("1000")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 7, 24)), Address("Rua da Liberdade", "Liberdade", "Cidade Livre", "São Paulo", "30", "89012345")),
-//            Event(Client("José Oliveira Lima"), Payment(BigDecimal("1100")), EventTimetable(LocalTime.of(17, 0), LocalTime.of(23, 0), LocalDate.of(2024, 12, 25)), Address("Avenida da Saudade", "Saudade", "Cidade Saudosa", "Paraíba", "29", "67890123")),
-//        )
         return events
     }
 

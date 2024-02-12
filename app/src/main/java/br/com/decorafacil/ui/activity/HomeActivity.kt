@@ -9,6 +9,7 @@ import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
 import br.com.decorafacil.infra.inmemory.UserRepositoryInMemory
 import br.com.decorafacil.repository.EventRepository
 import br.com.decorafacil.repository.UserRepository
+import br.com.decorafacil.ui.ScheduleActivity
 import br.com.decorafacil.ui.activity.form.newevent.NewEventStepOneActivity
 import br.com.decorafacil.ui.recyclerView.NextEventsAdapter
 import br.com.decorafacil.ui.recyclerView.PendingPaymentsAdapter
@@ -44,6 +45,7 @@ class HomeActivity : AppCompatActivity() {
         configNextEventsRecyclerView()
         configEyeToggleVisible()
         configNewEventButton()
+        configScheduleButton()
     }
 
     private fun configTopBarHelloMessage() {
@@ -85,6 +87,14 @@ class HomeActivity : AppCompatActivity() {
         val buttonNewEvent = binding.buttonNewEvent
         buttonNewEvent.setOnClickListener {
             val intent = Intent(this, NewEventStepOneActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun configScheduleButton() {
+        val buttonNewEvent = binding.buttonSchedule
+        buttonNewEvent.setOnClickListener {
+            val intent = Intent(this, ScheduleActivity::class.java)
             startActivity(intent)
         }
     }
