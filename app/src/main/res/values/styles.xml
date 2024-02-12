@@ -5,6 +5,7 @@
         <item name="colorAccent">@color/purple</item>
         <item name="colorPrimary">@color/black</item>
         <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:background">@color/whiteBackgroundDefault</item>
     </style>
 
     <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
