@@ -15,8 +15,8 @@
     <string name="card_button_financial">Financeiro</string>
     <string name="schedule_icon_description">Ícone de agenda</string>
     <string name="financial_icon_description">Ícone de cifrão do dólar</string>
-    <string name="textview_pagamentos_pendentes">Pagamentos pendentes</string>
-    <string name="textview_proximos_eventos">Próximos eventos</string>
+    <string name="textview_pagamentos_pendentes">Pagamentos pendentes:</string>
+    <string name="textview_proximos_eventos">Próximos eventos:</string>
     <string name="eye_hide_values_icon_description">Ícone de olho para esconder valores</string>
     <string name="help_text_new_event_form_step_one">Adicione as informações do Contratante do seu evento</string>
     <string name="new_event_personal_information">Informações pessoais</string>
