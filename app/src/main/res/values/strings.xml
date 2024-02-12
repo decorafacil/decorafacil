@@ -71,4 +71,8 @@
     <string name="new_event_event_zip_code">CEP</string>
     <string name="edit_text_hint_cep">CEP</string>
     <string name="schedule_top_bar">Agenda</string>
+    <string name="text_view_title_forgot_password">Esqueci minha senha:</string>
+    <string name="text_view_alert_phrase_pt_one">Para sua segurança enviaremos um código</string>
+    <string name="text_view_alert_phrase_pt_two">para validar sua redefinição de senha</string>
+    <string name="button_send_code">Enviar Código</string>
 </resources>

@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
 
         goToHomeActivity()
         goToUserRegisterActivity()
+        goToForgotPasswordActivity()
     }
 
     private fun goToUserRegisterActivity() {
@@ -48,6 +49,16 @@ class LoginActivity : AppCompatActivity() {
                 val mensagem = "Os dados de login estão incorretos. Por favor, tente novamente."
                 exibirSnackbar(mensagem)
             }
+        }
+    }
+
+    private fun goToForgotPasswordActivity() {
+
+        val btnForgotPassword = findViewById<TextView>(R.id.textViewForgotPassword)
+
+        btnForgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
         }
     }
 
