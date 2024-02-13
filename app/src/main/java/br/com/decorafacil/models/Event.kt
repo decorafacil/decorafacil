@@ -5,7 +5,8 @@ class Event(
     val payment: Payment,
     val timetable: EventTimetable,
     val address: Address,
-    val services: List<Service> = emptyList()
+    val services: List<Service> = emptyList(),
+    val canceled: Boolean = false
 ) {
 
     override fun toString(): String {
