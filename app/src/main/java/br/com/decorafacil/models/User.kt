@@ -8,6 +8,5 @@ class User(
     val email: String,
     val address: Address,
     val password: String,
-    val confirmPassword: String
 ) {
 }

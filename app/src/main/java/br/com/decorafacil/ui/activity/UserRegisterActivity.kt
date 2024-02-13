@@ -67,7 +67,6 @@ class UserRegisterActivity : AppCompatActivity() {
                     email,
                     address,
                     password,
-                    confirmPassword
                 )
 
                 try {
