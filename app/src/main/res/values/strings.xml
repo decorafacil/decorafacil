@@ -18,7 +18,7 @@
     <string name="textview_pagamentos_pendentes">Pagamentos pendentes:</string>
     <string name="textview_proximos_eventos">Próximos eventos:</string>
     <string name="eye_hide_values_icon_description">Ícone de olho para esconder valores</string>
-    <string name="help_text_new_event_form_step_one">Adicione as informações do Contratante do seu evento</string>
+    <string name="help_text_new_event_form_step_one">Adicione as informações do <b>Contratante</b> do seu evento</string>
     <string name="new_event_personal_information">Informações pessoais</string>
     <string name="new_event_client_name">Nome</string>
     <string name="new_event_client_cpf">CPF</string>
@@ -42,7 +42,7 @@
     <string name="textview_information_address">ENDEREÇO:</string>
     <string name="textview_information_password">SENHA:</string>
     <string name="edit_text_hint_confirm_password">Confirmar senha</string>
-    <string name="help_text_new_event_form_step_two">Adicione as informações do seu Evento</string>
+    <string name="help_text_new_event_form_step_two">Adicione as informações do seu <b>Evento</b></string>
     <string name="new_event_event_information">Local do evento:</string>
     <string name="new_event_event_street">Logradouro</string>
     <string name="new_event_district">Bairro</string>
@@ -57,7 +57,7 @@
     <string name="new_event_end_time">Horário de término</string>
     <string name="new_event_birthday_person_name">Nome do aniversariante</string>
     <string name="new_event_birthday_person_age">Idade a completar</string>
-    <string name="help_text_new_event_form_step_three">Adicione as informações dos Serviços contratados</string>
+    <string name="help_text_new_event_form_step_three">Adicione as informações dos <b>Serviços</b> contratados</string>
     <string name="new_event_services">Serviços:</string>
     <string name="new_event_service_description">Descrição</string>
     <string name="new_event_service_value">Valor</string>
