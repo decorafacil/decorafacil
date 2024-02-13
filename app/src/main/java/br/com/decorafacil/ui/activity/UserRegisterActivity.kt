@@ -27,7 +27,7 @@ class UserRegisterActivity : AppCompatActivity() {
     }
 
     private fun backToLoginActivity() {
-        val btnBackArrow = findViewById<ImageView>(R.id.leftarrow)
+        val btnBackArrow = findViewById<ImageView>(R.id.imageViewUserLeftArrow)
 
         btnBackArrow.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
