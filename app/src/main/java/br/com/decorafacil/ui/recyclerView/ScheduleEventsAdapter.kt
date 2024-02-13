@@ -4,10 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.decorafacil.R
 import br.com.decorafacil.databinding.EventCardBinding
 import br.com.decorafacil.extensions.toPtBr
 import br.com.decorafacil.models.Event
 import br.com.decorafacil.ui.dialog.EditEventDialog
+import java.time.LocalDate
 
 class ScheduleEventsAdapter(
     private val context: Context,
@@ -19,6 +21,7 @@ class ScheduleEventsAdapter(
     class ViewHolder(private val binding: EventCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        private val circle = binding.ellipse
         private val eventDayOfMonth = binding.textViewEventDayOfMonth
         private val eventMonth = binding.textViewEventMonth
         private val clientName = binding.textViewClientName
@@ -31,6 +34,16 @@ class ScheduleEventsAdapter(
             clientName.text = event.client.contractor
             eventAddress.text = event.address.toString()
             eventTimetable.text = "${event.timetable.startTime} - ${event.timetable.endTime}"
+
+            var circleBackground: Int? = null
+            circleBackground = if (event.canceled) {
+                R.drawable.circle_shape_red
+            } else if (event.timetable.date < LocalDate.now()) {
+                R.drawable.circle_shape_green
+            } else {
+                R.drawable.circle_shape_purple
+            }
+            circle.setImageResource(circleBackground)
         }
 
         fun onClick(event: Event) {
