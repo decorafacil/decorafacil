@@ -1,5 +1,6 @@
 package br.com.decorafacil.ui.recyclerView
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -68,6 +69,13 @@ class ScheduleEventsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(events[position])
         holder.onClick(events[position])
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateEvents(newEvents: List<Event>) {
+        events.clear()
+        events.addAll(newEvents)
+        notifyDataSetChanged()
     }
 
 }

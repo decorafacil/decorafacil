@@ -8,10 +8,17 @@ import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
 import br.com.decorafacil.repository.EventRepository
 import br.com.decorafacil.ui.activity.HomeActivity
 import br.com.decorafacil.ui.recyclerView.ScheduleEventsAdapter
+import java.time.LocalDate
 
 class ScheduleActivity : AppCompatActivity() {
 
     private val eventRepository: EventRepository = EventRepositoryInMemory()
+    private var events = eventRepository.findEventsByDate(LocalDate.now())
+    private val eventsRecyclerViewAdapter = ScheduleEventsAdapter(
+        this,
+        events
+    )
+
     private val binding by lazy {
         ActivityScheduleBinding.inflate(layoutInflater)
     }
@@ -23,17 +30,23 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     private fun configComponents() {
+        configCalendarView()
         configButtonBack()
         configNextEventsRecyclerView()
     }
 
+    private fun configCalendarView() {
+        val calendarView = binding.calendarView
+        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
+            val selectedDate = LocalDate.of(year, month + 1, dayOfMonth)
+            events = eventRepository.findEventsByDate(selectedDate)
+            eventsRecyclerViewAdapter.updateEvents(events)
+        }
+    }
+
     private fun configNextEventsRecyclerView() {
-        val nextEventsRecyclerViewAdapter = ScheduleEventsAdapter(
-            this,
-            eventRepository.findNextEvents()
-        )
         val recyclerView = binding.recyclerViewNextEvents
-        recyclerView.adapter = nextEventsRecyclerViewAdapter
+        recyclerView.adapter = eventsRecyclerViewAdapter
     }
 
     private fun configButtonBack() {
