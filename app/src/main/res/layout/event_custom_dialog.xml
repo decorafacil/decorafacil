@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textViewClientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_semibold"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Luciana Alves da Silva Santos Nogueira" />
+
+    <TextView
+        android:id="@+id/textViewEventAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:textColor="@color/grayHint"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/textViewClientName"
+        app:layout_constraintStart_toStartOf="@id/textViewClientName"
+        app:layout_constraintTop_toBottomOf="@id/textViewClientName"
+        tools:text="Rua Governador José Roberto, 1413 - Vila São João - Sorocaba - SP" />
+
+    <TextView
+        android:id="@+id/textViewBirthdayPersonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/grayHint"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/textViewClientName"
+        app:layout_constraintStart_toStartOf="@id/textViewClientName"
+        app:layout_constraintTop_toBottomOf="@id/textViewEventAddress"
+        tools:text="Aniversariante: Paula da Silva Lobato Santos Munhoz" />
+
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/purple"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/button_dialog_edit"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/textViewClientName"
+        app:layout_constraintStart_toStartOf="@id/textViewClientName"
+        app:layout_constraintTop_toBottomOf="@id/textViewBirthdayPersonName" />
+
+    <Button
+        android:id="@+id/buttonCancelEvent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/salmon"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/button_dialog_cancel_event"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/textViewClientName"
+        app:layout_constraintStart_toStartOf="@id/textViewClientName"
+        app:layout_constraintTop_toBottomOf="@id/buttonEdit" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray10"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/button_dialog_back"
+        android:textColor="@color/blackInputText"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/textViewClientName"
+        app:layout_constraintStart_toStartOf="@id/textViewClientName"
+        app:layout_constraintTop_toBottomOf="@id/buttonCancelEvent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

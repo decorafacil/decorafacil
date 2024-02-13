@@ -75,4 +75,7 @@
     <string name="text_view_alert_phrase_pt_one">Para sua segurança enviaremos um código</string>
     <string name="text_view_alert_phrase_pt_two">para validar sua redefinição de senha</string>
     <string name="button_send_code">Enviar Código</string>
+    <string name="button_dialog_edit">Editar</string>
+    <string name="button_dialog_cancel_event">Cancelar Evento</string>
+    <string name="button_dialog_back">Voltar</string>
 </resources>
