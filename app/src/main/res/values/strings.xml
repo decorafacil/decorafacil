@@ -28,7 +28,7 @@
     <string name="next_button">PRÓXIMO</string>
     <string name="textview_user">Usuário</string>
     <string name="edit_text_hint_fantasy_name">Nome fantasia</string>
-    <string name="textview_personal_information">INFORMAÇÕES PESSOAIS</string>
+    <string name="textview_personal_information">INFORMAÇÕES PESSOAIS:</string>
     <string name="edit_text_hint_name">Nome</string>
     <string name="edit_text_hint_cpf">CPF</string>
     <string name="edit_text_hint_phone_number">Telefone</string>
@@ -39,8 +39,8 @@
     <string name="edit_text_hint_street_address">Logradouro</string>
     <string name="edit_text_hint_number_address">Número</string>
     <string name="edit_text_hint_neighborhood">Bairro</string>
-    <string name="textview_information_address">ENDEREÇO</string>
-    <string name="textview_information_password">SENHA</string>
+    <string name="textview_information_address">ENDEREÇO:</string>
+    <string name="textview_information_password">SENHA:</string>
     <string name="edit_text_hint_confirm_password">Confirmar senha</string>
     <string name="help_text_new_event_form_step_two">Adicione as informações do seu Evento</string>
     <string name="new_event_event_information">Local do evento:</string>
