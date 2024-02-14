@@ -1,10 +1,8 @@
 package br.com.decorafacil.extensions
 
+import br.com.decorafacil.utils.PT_BR_CURRENCY_FORMAT
 import java.math.BigDecimal
-import java.text.NumberFormat
-import java.util.Locale
 
 fun BigDecimal.toPtBr(): String {
-    val formatter: NumberFormat = NumberFormat.getCurrencyInstance(Locale("pt", "br"))
-    return formatter.format(this)
+    return PT_BR_CURRENCY_FORMAT.format(this)
 }

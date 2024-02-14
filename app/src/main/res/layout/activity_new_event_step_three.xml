@@ -165,7 +165,7 @@
                 app:layout_constraintTop_toBottomOf="@id/recyclerViewServices" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputTotal"
+                android:id="@+id/textInputSignal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -180,17 +180,17 @@
                 app:layout_constraintTop_toBottomOf="@id/textViewPaymentInfos">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextTotal"
+                    android:id="@+id/editTextSignal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/new_event_total"
+                    android:hint="@string/new_event_signal"
                     android:inputType="numberDecimal"
                     android:textColor="@color/blackInputText"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputSignal"
+                android:id="@+id/textInputTotal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -202,13 +202,13 @@
                 app:boxCornerRadiusTopStart="24dp"
                 app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
                 app:layout_constraintStart_toStartOf="@id/textViewHelpText"
-                app:layout_constraintTop_toBottomOf="@id/textInputTotal">
+                app:layout_constraintTop_toBottomOf="@id/textInputSignal">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextSignal"
+                    android:id="@+id/editTextTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/new_event_signal"
+                    android:hint="@string/new_event_total"
                     android:inputType="numberDecimal"
                     android:textColor="@color/blackInputText"
                     android:textSize="18sp" />
@@ -227,7 +227,7 @@
                 app:boxCornerRadiusTopStart="24dp"
                 app:layout_constraintEnd_toEndOf="@id/textViewHelpText"
                 app:layout_constraintStart_toStartOf="@id/textViewHelpText"
-                app:layout_constraintTop_toBottomOf="@id/textInputSignal">
+                app:layout_constraintTop_toBottomOf="@id/textInputTotal">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextRemaining"
