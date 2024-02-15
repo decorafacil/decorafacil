@@ -40,16 +40,21 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <CalendarView
+    <com.applandeo.materialcalendarview.CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dateTextAppearance="@style/CalenderViewDateCustomText"
-        android:theme="@style/CalenderViewCustom"
-        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+        app:abbreviationsBarColor="@color/purple"
+        app:abbreviationsLabelsColor="@color/white"
+        app:headerColor="@color/purple"
+        app:headerLabelColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topBar" />
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:pagesColor="@color/whiteBackgroundDefault"
+        app:selectionColor="@color/purple"
+        app:todayLabelColor="@color/purple"
+        app:type="one_day_picker" />
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider"
