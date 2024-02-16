@@ -13,20 +13,20 @@ class Utils {
     companion object {
         private fun generateRandomClient(): Client {
             val contractor = listOf(
-                "Lucas Silva",
-                "Mariana Oliveira",
-                "Rafael Santos",
-                "Pedro Henrique",
-                "Thyago Lobato",
-                "Lucas Nunes"
+                "Lucas Silva Nunes Menezes",
+                "Mariana Oliveira da Cunha",
+                "Rafael Santos Silva de Souza",
+                "Pedro Henrique Pereira Almeida",
+                "Thyago Lobato da Silva",
+                "Lucas Nunes Monteiro"
             ).random()
             val birthdayPersonName =
                 listOf(
-                    "Enzo da Silva",
-                    "Lara Oliveira",
-                    "Mateus Santos",
-                    "Mariana da Silva",
-                    "Lorenzo de Paula"
+                    "Enzo da Silva Nunes Menezes",
+                    "Lara Oliveira da Cunha",
+                    "Mateus Santos Silva de Souza",
+                    "Mariana da Silva Pereira Almeida",
+                    "Lorenzo de Paula Monteiro"
                 ).random()
             val age = (18..60).random()
             return Client(contractor, birthdayPersonName, age)
@@ -38,7 +38,8 @@ class Utils {
         }
 
         private fun generateRandomTimetable(): EventTimetable {
-            val date = LocalDate.of(2024, (1..12).random(), (1..28).random())
+            val dayClosedRange = listOf(1..3, 10..13, 25..28).random()
+            val date = LocalDate.of(2024, (1..12).random(), dayClosedRange.random())
             val startTime = LocalTime.of((8..20).random(), 0)
             val endTime = LocalTime.of((21..23).random(), 0)
             return EventTimetable(date, startTime, endTime)
