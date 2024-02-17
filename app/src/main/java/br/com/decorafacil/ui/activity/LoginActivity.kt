@@ -28,23 +28,17 @@ class LoginActivity : AppCompatActivity() {
 
     private fun configCreateAccountButton() {
         val buttonCreateAccount = findViewById<TextView>(R.id.textViewCreateAccount)
-
         buttonCreateAccount.setOnClickListener {
             val intent = Intent(this, UserRegisterActivity::class.java)
             startActivity(intent)
-
         }
     }
 
     private fun configEnterButton() {
-
         val buttonEnter = findViewById<Button>(R.id.buttonLogin)
-
         buttonEnter.setOnClickListener {
-
             val email = findViewById<EditText>(R.id.editTextEmail).text.toString()
             val password = findViewById<EditText>(R.id.editTextPassword).text.toString()
-
             if (isRegisteredUser(email, password)) {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
@@ -56,9 +50,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun configForgotPasswordButton() {
-
         val buttonForgotPassword = findViewById<TextView>(R.id.textViewForgotPassword)
-
         buttonForgotPassword.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)

@@ -21,43 +21,38 @@ class UserRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_register)
+        configComponents()
+    }
 
-        backToLoginActivity()
+    private fun configComponents() {
+        configBackArrowButton()
         saveUserData()
     }
 
-    private fun backToLoginActivity() {
-        val btnBackArrow = findViewById<ImageView>(R.id.imageViewUserLeftArrow)
-
-        btnBackArrow.setOnClickListener {
+    private fun configBackArrowButton() {
+        val buttonBackArrow = findViewById<ImageView>(R.id.imageViewUserLeftArrow)
+        buttonBackArrow.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
 
     private fun saveUserData() {
-        val btnSaveUserInformation = findViewById<ImageButton>(R.id.imageButtonSaveUser)
-
-        btnSaveUserInformation.setOnClickListener {
-
+        val buttonSaveUserInformation = findViewById<ImageButton>(R.id.imageButtonSaveUser)
+        buttonSaveUserInformation.setOnClickListener {
             val fantasyName = findViewById<EditText>(R.id.editTextFantasyName).text.toString()
             val name = findViewById<EditText>(R.id.editTextUserName).text.toString()
             val cpf = findViewById<EditText>(R.id.editTextUserCpf).text.toString()
             val phoneNumber = findViewById<EditText>(R.id.editTextUserPhoneNumber).text.toString()
             val email = findViewById<EditText>(R.id.editTextUserEmail).text.toString()
-
             val street = findViewById<EditText>(R.id.editTextUserStreetAddress).text.toString()
-            val addressNumber =
-                findViewById<EditText>(R.id.editTextUserAddressNumber).text.toString()
+            val addressNumber = findViewById<EditText>(R.id.editTextUserAddressNumber).text.toString()
             val district = findViewById<EditText>(R.id.editTextUserDistrict).text.toString()
             val complement = findViewById<EditText>(R.id.editTextUserComplement).text.toString()
             val city = findViewById<EditText>(R.id.editTextUserCity).text.toString()
-
             val address = Address(street, district, city, "", addressNumber, "", complement)
-
-            var password = findViewById<EditText>(R.id.editTextUserPassword).text.toString()
-            var confirmPassword = findViewById<EditText>(R.id.editTextUserConfirmPassword).text.toString()
-
+            val password = findViewById<EditText>(R.id.editTextUserPassword).text.toString()
+            val confirmPassword = findViewById<EditText>(R.id.editTextUserConfirmPassword).text.toString()
             if (password == confirmPassword) {
                 val user = User(
                     fantasyName,
@@ -68,25 +63,21 @@ class UserRegisterActivity : AppCompatActivity() {
                     address,
                     password,
                 )
-
                 try {
                     userRepository.save(user)
                 } catch (e: Exception) {
                     throw Exception("Erro ao tentar salvar um novo usuário. Mensagem de erro: " + e.message)
                 }
-
-                backToHomeActivity()
+                configSaveUserInformationButton()
             } else {
                 Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 
-    private fun backToHomeActivity() {
+    private fun configSaveUserInformationButton() {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
-
         Toast.makeText(applicationContext, "Usuário salvo com sucesso!", Toast.LENGTH_SHORT).show()
     }
 }
