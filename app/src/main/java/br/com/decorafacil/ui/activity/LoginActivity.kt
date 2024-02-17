@@ -17,27 +17,30 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        goToHomeActivity()
-        goToUserRegisterActivity()
-        goToForgotPasswordActivity()
+        configComponents()
     }
 
-    private fun goToUserRegisterActivity() {
-        val btnCriarConta = findViewById<TextView>(R.id.textViewCreateAccount)
+    private fun configComponents() {
+        configCreateAccountButton()
+        configEnterButton()
+        configForgotPasswordButton()
+    }
 
-        btnCriarConta.setOnClickListener {
+    private fun configCreateAccountButton() {
+        val buttonCreateAccount = findViewById<TextView>(R.id.textViewCreateAccount)
+
+        buttonCreateAccount.setOnClickListener {
             val intent = Intent(this, UserRegisterActivity::class.java)
             startActivity(intent)
 
         }
     }
 
-    private fun goToHomeActivity() {
+    private fun configEnterButton() {
 
-        val btnEntrar = findViewById<Button>(R.id.buttonLogin)
+        val buttonEnter = findViewById<Button>(R.id.buttonLogin)
 
-        btnEntrar.setOnClickListener {
+        buttonEnter.setOnClickListener {
 
             val email = findViewById<EditText>(R.id.editTextEmail).text.toString()
             val password = findViewById<EditText>(R.id.editTextPassword).text.toString()
@@ -46,17 +49,17 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             } else {
-                val mensagem = "Os dados de login estão incorretos. Por favor, tente novamente."
-                exibirSnackbar(mensagem)
+                val message = "Os dados de login estão incorretos. Por favor, tente novamente."
+                showSnackBar(message)
             }
         }
     }
 
-    private fun goToForgotPasswordActivity() {
+    private fun configForgotPasswordButton() {
 
-        val btnForgotPassword = findViewById<TextView>(R.id.textViewForgotPassword)
+        val buttonForgotPassword = findViewById<TextView>(R.id.textViewForgotPassword)
 
-        btnForgotPassword.setOnClickListener {
+        buttonForgotPassword.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
@@ -66,12 +69,12 @@ class LoginActivity : AppCompatActivity() {
         return userRepository.findUserByEmailAndPassword(email, password) != null
     }
 
-    private fun exibirSnackbar(mensagem: String) {
-        val snackbar = Snackbar.make(
+    private fun showSnackBar(message: String) {
+        val snackBar = Snackbar.make(
             findViewById(android.R.id.content),
-            mensagem,
+            message,
             Snackbar.LENGTH_SHORT
         )
-        snackbar.show()
+        snackBar.show()
     }
 }
