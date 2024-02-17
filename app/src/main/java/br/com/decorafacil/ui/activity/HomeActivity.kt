@@ -46,6 +46,7 @@ class HomeActivity : AppCompatActivity() {
         configEyeToggleVisible()
         configNewEventButton()
         configScheduleButton()
+        configProfileButton()
     }
 
     private fun configTopBarHelloMessage() {
@@ -99,4 +100,13 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    private fun configProfileButton() {
+        val buttonProfile = binding.imageViewUser
+        buttonProfile.setOnClickListener {
+            startActivity(Intent(this, UserRegisterActivity::class.java).apply {
+                putExtra("source", "home")
+            })
+        }
+
+    }
 }

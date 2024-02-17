@@ -21,6 +21,7 @@ class UserRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        if (isFromHomeActivity()) fillUserData()
         configComponents()
     }
 
@@ -51,7 +52,8 @@ class UserRegisterActivity : AppCompatActivity() {
             val district = binding.editTextUserDistrict.text.toString()
             val complement = binding.editTextUserComplement.text.toString()
             val city = binding.editTextUserCity.text.toString()
-            val address = Address(street, district, city, "", addressNumber, zipCode, complement)
+            val state = binding.dropDownUserState.text.toString()
+            val address = Address(street, district, city, state, addressNumber, zipCode, complement)
             val password = binding.editTextUserPassword.text.toString()
             val confirmPassword = binding.editTextUserConfirmPassword.text.toString()
             if (password == confirmPassword) {
@@ -80,5 +82,28 @@ class UserRegisterActivity : AppCompatActivity() {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         Toast.makeText(applicationContext, "Usuário salvo com sucesso!", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun isFromHomeActivity(): Boolean {
+        val source = intent.getStringExtra("source")
+        return source == "home"
+    }
+
+    private fun fillUserData() {
+        val user = userRepository.findLoggedUser()
+        binding.editTextFantasyName.setText(user.companyName)
+        binding.editTextUserName.setText(user.name)
+        binding.editTextUserCpf.setText(user.cpf)
+        binding.editTextUserPhoneNumber.setText(user.phoneNumber)
+        binding.editTextUserEmail.setText(user.email)
+        binding.editTextUserZipCode.setText(user.address.zipCode)
+        binding.editTextUserStreetAddress.setText(user.address.street)
+        binding.editTextUserAddressNumber.setText(user.address.number)
+        binding.editTextUserDistrict.setText(user.address.district)
+        binding.editTextUserComplement.setText(user.address.complement)
+        binding.editTextUserCity.setText(user.address.city)
+        binding.dropDownUserState.setText(user.address.state, false)
+        binding.editTextUserPassword.setText(user.password)
+        binding.editTextUserConfirmPassword.setText(user.password)
     }
 }
