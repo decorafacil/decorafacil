@@ -32,4 +32,18 @@ class UserRepositoryInMemory : UserRepository {
     override fun save(user: User) {
         users.add(user)
     }
+
+    override fun findUserByCPF(cpf: String): User {
+        return users.find { it.cpf == cpf } ?: throw Exception("Usuário não encontrado.")
+    }
+
+    override fun deleteUserByCPF(cpf: String) {
+        val user = this.findUserByCPF(cpf)
+        users.remove(user)
+    }
+
+    override fun update(user: User) {
+        this.deleteUserByCPF(user.cpf)
+        this.save(user)
+    }
 }
