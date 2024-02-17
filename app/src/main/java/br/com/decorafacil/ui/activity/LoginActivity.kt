@@ -1,12 +1,11 @@
 package br.com.decorafacil.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.R
+import br.com.decorafacil.databinding.ActivityLoginBinding
 import br.com.decorafacil.infra.inmemory.UserRepositoryInMemory
 import br.com.decorafacil.repository.UserRepository
 import com.google.android.material.snackbar.Snackbar
@@ -14,9 +13,14 @@ import com.google.android.material.snackbar.Snackbar
 class LoginActivity : AppCompatActivity() {
 
     private val userRepository: UserRepository = UserRepositoryInMemory()
+
+    private val binding by lazy {
+        ActivityLoginBinding.inflate(layoutInflater);
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(binding.root)
         configComponents()
     }
 
@@ -27,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun configCreateAccountButton() {
-        val buttonCreateAccount = findViewById<TextView>(R.id.textViewCreateAccount)
+        val buttonCreateAccount =  binding.textViewCreateAccount
         buttonCreateAccount.setOnClickListener {
             val intent = Intent(this, UserRegisterActivity::class.java)
             startActivity(intent)
@@ -35,10 +39,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun configEnterButton() {
-        val buttonEnter = findViewById<Button>(R.id.buttonLogin)
+        val buttonEnter = binding.buttonLogin
         buttonEnter.setOnClickListener {
-            val email = findViewById<EditText>(R.id.editTextEmail).text.toString()
-            val password = findViewById<EditText>(R.id.editTextPassword).text.toString()
+            val email = binding.editTextEmail.text.toString()
+            val password = binding.editTextPassword.text.toString()
             if (isRegisteredUser(email, password)) {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
@@ -63,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showSnackBar(message: String) {
         val snackBar = Snackbar.make(
-            findViewById(android.R.id.content),
+            binding.root,
             message,
             Snackbar.LENGTH_SHORT
         )
