@@ -21,13 +21,13 @@ class UserRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        if (isFromHomeActivity()) fillUserData()
         configComponents()
     }
 
     private fun configComponents() {
         configBackArrowButton()
         saveUserData()
+        fillUserData()
     }
 
     private fun configBackArrowButton() {
@@ -36,6 +36,12 @@ class UserRegisterActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun configSaveUserInformationButton() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        Toast.makeText(applicationContext, "Usuário salvo com sucesso!", Toast.LENGTH_SHORT).show()
     }
 
     private fun saveUserData() {
@@ -67,7 +73,7 @@ class UserRegisterActivity : AppCompatActivity() {
                     password,
                 )
                 try {
-                    userRepository.save(user)
+                    if (isFromHomeActivity()) userRepository.update(user) else userRepository.save(user)
                 } catch (e: Exception) {
                     throw Exception("Erro ao tentar salvar um novo usuário. Mensagem de erro: " + e.message)
                 }
@@ -78,32 +84,28 @@ class UserRegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun configSaveUserInformationButton() {
-        val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
-        Toast.makeText(applicationContext, "Usuário salvo com sucesso!", Toast.LENGTH_SHORT).show()
-    }
-
     private fun isFromHomeActivity(): Boolean {
         val source = intent.getStringExtra("source")
         return source == "home"
     }
 
     private fun fillUserData() {
-        val user = userRepository.findLoggedUser()
-        binding.editTextFantasyName.setText(user.companyName)
-        binding.editTextUserName.setText(user.name)
-        binding.editTextUserCpf.setText(user.cpf)
-        binding.editTextUserPhoneNumber.setText(user.phoneNumber)
-        binding.editTextUserEmail.setText(user.email)
-        binding.editTextUserZipCode.setText(user.address.zipCode)
-        binding.editTextUserStreetAddress.setText(user.address.street)
-        binding.editTextUserAddressNumber.setText(user.address.number)
-        binding.editTextUserDistrict.setText(user.address.district)
-        binding.editTextUserComplement.setText(user.address.complement)
-        binding.editTextUserCity.setText(user.address.city)
-        binding.dropDownUserState.setText(user.address.state, false)
-        binding.editTextUserPassword.setText(user.password)
-        binding.editTextUserConfirmPassword.setText(user.password)
+        if (isFromHomeActivity()) {
+            val user = userRepository.findLoggedUser()
+            binding.editTextFantasyName.setText(user.companyName)
+            binding.editTextUserName.setText(user.name)
+            binding.editTextUserCpf.setText(user.cpf)
+            binding.editTextUserPhoneNumber.setText(user.phoneNumber)
+            binding.editTextUserEmail.setText(user.email)
+            binding.editTextUserZipCode.setText(user.address.zipCode)
+            binding.editTextUserStreetAddress.setText(user.address.street)
+            binding.editTextUserAddressNumber.setText(user.address.number)
+            binding.editTextUserDistrict.setText(user.address.district)
+            binding.editTextUserComplement.setText(user.address.complement)
+            binding.editTextUserCity.setText(user.address.city)
+            binding.dropDownUserState.setText(user.address.state, false)
+            binding.editTextUserPassword.setText(user.password)
+            binding.editTextUserConfirmPassword.setText(user.password)
+        }
     }
 }
