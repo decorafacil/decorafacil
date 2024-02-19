@@ -2,6 +2,7 @@ package br.com.decorafacil.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.R
 import br.com.decorafacil.databinding.ActivityScheduleBinding
@@ -40,6 +41,7 @@ class ScheduleActivity : AppCompatActivity() {
         configCalendarView()
         configButtonBack()
         configNextEventsRecyclerView()
+        configVisibilityNoEventsMessage()
     }
 
     private fun configCalendarView() {
@@ -59,11 +61,22 @@ class ScheduleActivity : AppCompatActivity() {
                 val selectedDate = convertDateToLocalDate(calendarDay.calendar.time)
                 events = eventRepository.findEventsByDate(selectedDate)
                 eventsRecyclerViewAdapter.updateEvents(events)
+                configVisibilityNoEventsMessage()
             }
         })
 
         calendarView.setOnForwardPageChangeListener(createPageChangeListener())
         calendarView.setOnPreviousPageChangeListener(createPageChangeListener())
+    }
+
+    fun configVisibilityNoEventsMessage() {
+        if (events.isEmpty()) {
+            binding.emptyMessage.visibility = View.VISIBLE
+            binding.recyclerViewNextEvents.visibility = View.GONE
+        } else {
+            binding.emptyMessage.visibility = View.GONE
+            binding.recyclerViewNextEvents.visibility = View.VISIBLE
+        }
     }
 
     private fun createPageChangeListener(): OnCalendarPageChangeListener {

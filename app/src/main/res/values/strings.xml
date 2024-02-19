@@ -82,4 +82,5 @@
     <string name="text_view_insert_the_code">Insira o código recebido por e-mail</string>
     <string name="button_change_password">Alterar senha</string>
     <string name="edit_text_hint_new_password">Nova senha</string>
+    <string name="empty_message">Não há eventos no dia selecionado</string>
 </resources>

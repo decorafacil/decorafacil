@@ -38,7 +38,7 @@ class Utils {
         }
 
         private fun generateRandomTimetable(): EventTimetable {
-            val dayClosedRange = listOf(1..3, 10..13, 25..28).random()
+            val dayClosedRange = listOf(2..4, 10..13, 25..28).random()
             val date = LocalDate.of(2024, (1..12).random(), dayClosedRange.random())
             val startTime = LocalTime.of((8..20).random(), 0)
             val endTime = LocalTime.of((21..23).random(), 0)
