@@ -54,7 +54,7 @@
         app:pagesColor="@color/whiteBackgroundDefault"
         app:selectionColor="@color/purple"
         app:todayLabelColor="@color/purple"
-        app:type="one_day_picker" />
+        app:type="classic" />
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider"
