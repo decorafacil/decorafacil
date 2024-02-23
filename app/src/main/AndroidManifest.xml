@@ -49,7 +49,7 @@
             android:name=".ui.activity.form.newevent.NewEventStepThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ScheduleActivity"
+            android:name=".ui.activity.ScheduleActivity"
             android:exported="false" />
 
         <meta-data

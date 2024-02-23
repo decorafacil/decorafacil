@@ -1,4 +1,4 @@
-package br.com.decorafacil.ui
+package br.com.decorafacil.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,6 @@ import br.com.decorafacil.databinding.ActivityScheduleBinding
 import br.com.decorafacil.infra.inmemory.EventRepositoryInMemory
 import br.com.decorafacil.models.Event
 import br.com.decorafacil.repository.EventRepository
-import br.com.decorafacil.ui.activity.HomeActivity
 import br.com.decorafacil.ui.recyclerView.ScheduleEventsAdapter
 import br.com.decorafacil.utils.convertDateToLocalDate
 import com.applandeo.materialcalendarview.CalendarDay
