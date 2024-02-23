@@ -12,8 +12,14 @@ val CPF_MASK = Mask(
     style = maskStyle
 )
 
-val CEP_MASK = Mask(
+val ZIP_CODE_MASK = Mask(
     value = "#####-###",
+    character = CHARACTER_MASK,
+    style = maskStyle
+)
+
+val PHONE_NUMBER_MASK = Mask(
+    value = "(##) #####-####",
     character = CHARACTER_MASK,
     style = maskStyle
 )

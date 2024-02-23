@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.decorafacil.databinding.ActivityNewEventStepTwoBinding
 import br.com.decorafacil.ui.activity.form.newevent.data.StepOneData
 import br.com.decorafacil.ui.activity.form.newevent.data.StepTwoData
+import br.com.decorafacil.ui.activity.masks.ZIP_CODE_MASK
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
+import com.santalu.maskara.MaskChangedListener
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -28,6 +30,7 @@ class NewEventStepTwoActivity : AppCompatActivity() {
     private val timePickerEventEndTime =
         MaterialTimePicker.Builder().setTimeFormat(timeFormat).setHour(12).setMinute(0)
             .setTitleText("Horário de término").build()
+    private val zipCodeMaskListener = MaskChangedListener(ZIP_CODE_MASK)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +44,7 @@ class NewEventStepTwoActivity : AppCompatActivity() {
         configEditTextEventEndTime()
         configNextButton()
         configButtonBack()
+        configEditTextZipCode()
     }
 
     private fun configEditTextEventDate() {
@@ -55,7 +59,8 @@ class NewEventStepTwoActivity : AppCompatActivity() {
             val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale("pt", "BR"))
             // TODO - Extrair trecho abaixo para um local dedicado
             val calendar = Calendar.getInstance()
-            calendar.time = Date(selection) // TODO - verificar por que Date(selection) é sempre a data -1 dia
+            calendar.time =
+                Date(selection) // TODO - verificar por que Date(selection) é sempre a data -1 dia
             calendar.add(Calendar.DAY_OF_MONTH, 1)
             val formattedDate = dateFormat.format(calendar.time)
             editTextDate.setText(formattedDate)
@@ -109,7 +114,7 @@ class NewEventStepTwoActivity : AppCompatActivity() {
                 putExtra(
                     "stepTwoData",
                     StepTwoData(
-                        binding.editTextEventZipCode.text.toString(),
+                        zipCodeMaskListener.unMasked,
                         binding.editTextEventStreet.text.toString(),
                         binding.editTextEventPlaceNumber.text.toString(),
                         binding.editTextEventDistrict.text.toString(),
@@ -132,4 +137,9 @@ class NewEventStepTwoActivity : AppCompatActivity() {
             startActivity(Intent(this, NewEventStepOneActivity::class.java))
         }
     }
+
+    private fun configEditTextZipCode() {
+        binding.editTextEventZipCode.addTextChangedListener(zipCodeMaskListener)
+    }
+
 }

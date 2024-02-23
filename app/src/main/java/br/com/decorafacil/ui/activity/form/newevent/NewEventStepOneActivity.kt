@@ -7,6 +7,7 @@ import br.com.decorafacil.databinding.ActivityNewEventStepOneBinding
 import br.com.decorafacil.ui.activity.HomeActivity
 import br.com.decorafacil.ui.activity.form.newevent.data.StepOneData
 import br.com.decorafacil.ui.activity.masks.CPF_MASK
+import br.com.decorafacil.ui.activity.masks.PHONE_NUMBER_MASK
 import com.santalu.maskara.MaskChangedListener
 
 class NewEventStepOneActivity : AppCompatActivity() {
@@ -14,6 +15,7 @@ class NewEventStepOneActivity : AppCompatActivity() {
         ActivityNewEventStepOneBinding.inflate(layoutInflater)
     }
     private val cpfMaskListener = MaskChangedListener(CPF_MASK)
+    private val phoneNumberMaskListener = MaskChangedListener(PHONE_NUMBER_MASK)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +27,7 @@ class NewEventStepOneActivity : AppCompatActivity() {
         configButtonNext()
         configButtonBack()
         configEditTextCpf()
+        configEditTextPhoneNumber()
     }
 
     private fun configButtonNext() {
@@ -35,7 +38,7 @@ class NewEventStepOneActivity : AppCompatActivity() {
                     StepOneData(
                         binding.editTextClientName.text.toString(),
                         cpfMaskListener.unMasked,
-                        binding.editTextClientPhoneNumber.text.toString(),
+                        phoneNumberMaskListener.unMasked,
                         binding.editTextClientEmail.text.toString()
                     )
                 )
@@ -51,6 +54,10 @@ class NewEventStepOneActivity : AppCompatActivity() {
 
     private fun configEditTextCpf() {
         binding.editTextClientCpf.addTextChangedListener(cpfMaskListener)
+    }
+
+    private fun configEditTextPhoneNumber() {
+        binding.editTextClientPhoneNumber.addTextChangedListener(phoneNumberMaskListener)
     }
 
 }

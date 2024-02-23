@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/new_event_event_zip_code"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:textColor="@color/blackInputText"
                     android:textSize="18sp" />
             </com.google.android.material.textfield.TextInputLayout>
