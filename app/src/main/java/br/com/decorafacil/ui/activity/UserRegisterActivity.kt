@@ -9,6 +9,10 @@ import br.com.decorafacil.infra.inmemory.UserRepositoryInMemory
 import br.com.decorafacil.models.Address
 import br.com.decorafacil.models.User
 import br.com.decorafacil.repository.UserRepository
+import br.com.decorafacil.ui.activity.masks.CPF_MASK
+import br.com.decorafacil.ui.activity.masks.PHONE_NUMBER_MASK
+import br.com.decorafacil.ui.activity.masks.ZIP_CODE_MASK
+import com.santalu.maskara.MaskChangedListener
 
 class UserRegisterActivity : AppCompatActivity() {
 
@@ -17,6 +21,10 @@ class UserRegisterActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityUserRegisterBinding.inflate(layoutInflater);
     }
+
+    private val cpfMaskListener = MaskChangedListener(CPF_MASK)
+    private val phoneNumberMaskListener = MaskChangedListener(PHONE_NUMBER_MASK)
+    private val zipCodeMaskListener = MaskChangedListener(ZIP_CODE_MASK)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +36,9 @@ class UserRegisterActivity : AppCompatActivity() {
         configBackArrowButton()
         saveUserData()
         fillUserData()
+        configEditTextCpf()
+        configEditTextPhoneNumber()
+        configEditTextZipCode()
     }
 
     private fun configBackArrowButton() {
@@ -107,5 +118,17 @@ class UserRegisterActivity : AppCompatActivity() {
             binding.editTextUserPassword.setText(user.password)
             binding.editTextUserConfirmPassword.setText(user.password)
         }
+    }
+
+    private fun configEditTextCpf() {
+        binding.editTextUserCpf.addTextChangedListener(cpfMaskListener)
+    }
+
+    private fun configEditTextPhoneNumber() {
+        binding.editTextUserPhoneNumber.addTextChangedListener(phoneNumberMaskListener)
+    }
+
+    private fun configEditTextZipCode() {
+        binding.editTextUserZipCode.addTextChangedListener(zipCodeMaskListener)
     }
 }
