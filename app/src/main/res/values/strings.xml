@@ -83,4 +83,8 @@
     <string name="button_change_password">Alterar senha</string>
     <string name="edit_text_hint_new_password">Nova senha</string>
     <string name="empty_message">Não há eventos no dia selecionado</string>
+    <string name="textview_financial">Financeiro</string>
+    <string name="textview_received">Recebidos:</string>
+    <string name="textview_to_receive">A Receber:</string>
+    <string name="textview_canceled">Cancelados:</string>
 </resources>
