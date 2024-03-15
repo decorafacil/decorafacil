@@ -46,6 +46,7 @@ class HomeActivity : AppCompatActivity() {
         configNewEventButton()
         configScheduleButton()
         configProfileButton()
+        configFinancialButton()
     }
 
     private fun configTopBarHelloMessage() {
@@ -106,6 +107,13 @@ class HomeActivity : AppCompatActivity() {
                 putExtra("source", "home")
             })
         }
+    }
 
+    private fun configFinancialButton() {
+        val buttonFinancial = binding.buttonFinancial
+        buttonFinancial.setOnClickListener {
+            val intent = Intent(this, FinancialActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

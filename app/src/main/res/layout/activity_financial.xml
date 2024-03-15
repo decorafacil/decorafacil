@@ -62,15 +62,15 @@
                     android:id="@+id/editTextMonth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Janeiro"
-                    android:textColorHint="@color/blackInputText"
                     android:gravity="center"
                     android:inputType="text"
                     android:textColor="@color/blackInputText"
-                    android:textSize="12sp" />
+                    android:textColorHint="@color/blackInputText"
+                    android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
+        android:id="@+id/imageViewLeftArrow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/arrow_back_ios"
@@ -81,6 +81,7 @@
         />
 
     <ImageView
+        android:id="@+id/imageViewRightArrow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/arrow_forward_ios"
